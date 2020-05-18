@@ -7,9 +7,6 @@ router.get('/', home.index);
 const listadoGenero = require('../controllers/listadoGeneroController');
 router.get('/listadoGenero', listadoGenero.index);
 
-// const peliculasFavoritas = require('../controllers/peliculasFavoritasController');
-// router.get('/peliculasFavoritas', peliculasFavoritas.index);
-
 const resultadoBusqueda = require('../controllers/resultadoBusquedaController');
 router.get('/resultadoBusqueda', resultadoBusqueda.index);
 
