@@ -1,0 +1,27 @@
+#header{
+    background-color: #000d1e !important;
+  }
+  
+  .uk-notification{
+    z-index: 2000 !important;
+  }
+  
+  
+  body{
+    padding-top: 80px;
+    background-color: #000d1e;
+  }
+  
+  div.columnas {
+    background-color: #00173a ;
+  }
+  
+  
+  #footer{
+      background-color: #000d1e !important;
+  }
+  
+  #logoFooter{
+    width: 20%;
+    height: auto;
+  }
