@@ -24,7 +24,7 @@ window.onload = function () {
             nombre = informacion.results[i].title;
             id = informacion.results[i].id;
             div = "<div class='col-md-2 '>"
-            div +=    "<a href='../../views/detallePelicula.ejs?id=" + id + "'>" +  "<img class='w-100 card-img ' src=" + imagen + ">" + "</a>"
+            div +=    "<a href='/detallePelicula?id=" + id + "'>" +  "<img class='w-100 card-img ' src=" + imagen + ">" + "</a>"
             div +=    "<h5 class='card-title text-white'>" + nombre + "</h5>";
             div += "</div>"
             document.querySelector(".genero").innerHTML += div
