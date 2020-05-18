@@ -6,7 +6,7 @@ router.get('/', home.index);
 
 const listadoGenero = require('../controllers/listadoGeneroController');
 router.get('/listadoGenero', listadoGenero.index);
-
+//jsfkd
 const resultadoBusqueda = require('../controllers/resultadoBusquedaController');
 router.get('/resultadoBusqueda', resultadoBusqueda.index);
 
