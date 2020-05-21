@@ -3,19 +3,19 @@ const db = require('../database/models');
 
 
 module.exports = {
-//     index: (req, res) => {
-//         db.Movies
-//         .findAll()
-//         .then(movies => {
-//             res.render("moviesList", {
-//                 listaPeliculas: movies
-//             })
-//         })
-//         .catch(error => {
-//             res.send(error);
-//         })
+    index: (req, res) => {
+        db.Movies
+        .findAll()
+        .then(movies => {
+            res.render("moviesList", {
+                listaPeliculas: movies
+            })
+        })
+        .catch(error => {
+            res.send(error);
+        })
         
-//     },
+    },
 
 //     create: (req, res) => {
 //         return res.render('moviesCreateForm');
