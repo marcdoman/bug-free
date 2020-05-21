@@ -1,16 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const home = require('../controllers/homeController');
-router.get('/', home.index);
 
 const listadoGenero = require('../controllers/listadoGeneroController');
-router.get('/listadoGenero', listadoGenero.index);
-//jsfkd
+router.get('/listadoGenero', listadoGenero.generos);
+
 const resultadoBusqueda = require('../controllers/resultadoBusquedaController');
-router.get('/resultadoBusqueda', resultadoBusqueda.index);
+router.get('/resultadoBusqueda', resultadoBusqueda.busqueda);
 
 const detallePelicula = require('../controllers/detallePeliculaController');
-router.get('/detallePelicula', detallePelicula.index);
+router.get('/detallePelicula', detallePelicula.detalle);
 
 module.exports = router;

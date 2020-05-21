@@ -1,4 +1,6 @@
 window.addEventListener("load", function () {
+
+    //const indexController = require('.../controllers/indexController')
     // BUSCADOR
     document.querySelector("form").addEventListener("click", function(event){
     
