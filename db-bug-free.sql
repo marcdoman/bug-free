@@ -2,6 +2,8 @@
 
 USE `bugFree`;
 
+-- Creación de tablas
+
 CREATE TABLE IF NOT EXISTS `users` (
 	`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	`fullName` varchar(255) NOT NULL,
@@ -22,6 +24,8 @@ CREATE TABLE IF NOT EXISTS `reviews` (
     `updatedAt` timestamp NULL DEFAULT NULL,
     FOREIGN KEY (`userId`) REFERENCES `users` (`id`)
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- Inserción de datos
 
 INSERT INTO `users` (`fullName`, `email`, `password`, `birthDate`) 
 VALUES 
