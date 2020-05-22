@@ -1,7 +1,8 @@
 let funcion = {
-    index: function (req, res) {
-            res.render('index');
-        }
-   }
+    // Home del sitio web
+    home: function (req, res) {
+        res.render('index');
+    }
+}
    
-   module.exports = funcion; 
+module.exports = funcion; 

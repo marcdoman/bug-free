@@ -25,10 +25,13 @@
       estreno = informacion.release_date;
       id = informacion.id;
       lenguajeOriginal = informacion.original_language;
-      for (var i = 0; i < (informacion.genres.length - 1); i++) {
-        generos += "<a href='../pagina2/listadoGenero.html?id=" + informacion.genres[i].id + "'>" + informacion.genres[i].name + "</a>" + " / ";
+      for (var i = 0; i < informacion.genres.length; i++) {
+        if (i == informacion.genres.length - 1) {
+          generos += "<a href='/generos/?id=" + informacion.genres[i].id + "'>" + informacion.genres[i].name + "</a>"
+        } else {
+          generos += "<a href='/generos/?id=" + informacion.genres[i].id + "'>" + informacion.genres[i].name + "</a>" + " / ";
+        }
       }
-      generos += "<a href='../pagina2/listadoGenero.html?id=" + informacion.genres[i].id + "'>" + informacion.genres[i].name + "</a>"
       var contenedor = document.querySelector(".row");
   
       contenedor.innerHTML =  "<div class='col-4  '>"
@@ -85,7 +88,7 @@
               nombre = informacion.results[i].title;
               id = informacion.results[i].id;
               li  = "<li>"
-              li +=    "<a href='../pagina5/detallePelicula.html?id=" + id + "'>" + "<img src=" + imagen + " alt=´´>"
+              li +=    "<a href='/peliculas/detalle/?id=" + id + "'>" + "<img src=" + imagen + " alt=´´>"
               li +=    "<div class=´uk-position-center uk-panel´></div>"
               li +=  "</li>"
   

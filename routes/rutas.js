@@ -1,14 +1,22 @@
 const express = require('express');
 const router = express.Router();
 
+// Controladores
+const indexController = require('../controllers/indexController');
+const generosController = require('../controllers/generosController');
+const buscadorController = require('../controllers/buscadorController');
+const peliculasController = require('../controllers/peliculasController');
 
-const listadoGenero = require('../controllers/listadoGeneroController');
-router.get('/listadoGenero', listadoGenero.generos);
+// http://localhost:3000/ ➜ Index
+router.get('/', indexController.home);
 
-const resultadoBusqueda = require('../controllers/resultadoBusquedaController');
-router.get('/resultadoBusqueda', resultadoBusqueda.busqueda);
+// http://localhost:3000/generos ➜ Géneros
+router.get('/generos', generosController.listado);
 
-const detallePelicula = require('../controllers/detallePeliculaController');
-router.get('/detallePelicula', detallePelicula.detalle);
+// http://localhost:3000/buscar/resultados ➜ Resultados de la búsqueda
+router.get('/buscar/resultados', buscadorController.resultados);
+
+// http://localhost:3000/peliculas/detalle ➜ Detalle de una película
+router.get('/peliculas/detalle', peliculasController.detalle);
 
 module.exports = router;

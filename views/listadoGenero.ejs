@@ -13,11 +13,14 @@
 
 <!-- empieza el header -->
 
-<header >
-
+<header>
   <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="/"> <img src="https://pa1.narvii.com/6212/3f97bf5294b0f2392aec2dd6bb2d00b2881fb766_hq.gif" width="160" height="64.5" class="d-inline-block align-top rounded-circle" alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- El enlace del logo ahora apunta a la raíz "/" del sitio -->
+    <a class="navbar-brand" href="/"> <img
+        src="https://pa1.narvii.com/6212/3f97bf5294b0f2392aec2dd6bb2d00b2881fb766_hq.gif" width="160" height="64.5"
+        class="d-inline-block align-top rounded-circle" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -29,7 +32,9 @@
         </li>
       </ul>
 
-      <form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="get"  action="./resultadoBusqueda.ejs"  >
+      <!-- Se cambia el action del form para que apunte a la ruta que renderiza la vista de resultados -->
+
+      <form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="get" action="/buscar/resultados">
         <input class="form-control mr-sm-2" name="buscador" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
@@ -38,7 +43,8 @@
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-item dropdown ">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             Géneros
           </a>
           <div class="dropdown-menu listaGeneros" id="generos" aria-labelledby="navbarDropdown listadoGeneros">
@@ -56,47 +62,15 @@
 
 
         <div class="log">
-
           <li class="nav-item active">
-            <a class="nav-link bienvenido" href="#"> </a>
+            <button type="button" class="btn btn-primary log" data-toggle="modal" data-target="#exampleModal"
+              data-whatever="@mdo">Log in </button>
           </li>
-        </ul>
-  
-        <form   class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="get"  action="../pagina4/ResultadosBusqueda.html"  >
-          <input class="form-control mr-sm-2" name="buscador" type="search" placeholder="Search" aria-label="Search">
-          <button  class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-  
-  
-        <ul class="navbar-nav ml-auto">
-  
-          <li class="nav-item dropdown ">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Géneros
-            </a>
-            <div class="dropdown-menu listaGeneros" id="generos" aria-labelledby="navbarDropdown listadoGeneros">
-  
-              <div class="dropdown-divider"></div>
-  
-            </div>
-          </li>
-  
-  
-          <li class="nav-item">
-            <a class="nav-link favoritas" href="../pagina6/favoritas.html"></a>
-          </li>
-  
-  
-          <div class="log">
-            <li class="nav-item active">
-              <button type="button" class="btn btn-primary log" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log in </button>
-            </li>
-          </div>
-  
-        </ul>
-      </div>
-    </nav>
-  </header>
+        </div>
+      </ul>
+    </div>
+  </nav>
+</header>
   
 
 <!-- boton de log in -->
@@ -193,22 +167,21 @@
     
     
     </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="/javascripts/listaGeneros.js"> </script>
+    <script type="text/javascript" src="/javascripts/webStorage.js"> </script>
+    <script type="text/javascript" src="/javascripts/log.js"> </script>
+
+
+    <script type="text/javascript" src="/javascripts/listadoGenero.js"> </script>
+
+
+    <script src="/uikit-3.1.5/js/uikit-icons.min.js"></script>
+    <script src="/uikit-3.1.5/js/uikit.min.js"></script>
 
   </body>
 </html>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-
-<script type="text/javascript" src="/javascripts/webStorage.js"> </script>
-<script type="text/javascript" src="/javascripts/log.js"> </script>
-
-
-<script type="text/javascript" src="/javascripts/listadoGenero.js"> </script>
-
-<script type="text/javascript" src="/javascripts/listadoGenero.js"></script>
-
-<script src="/uikit-3.1.5/js/uikit-icons.min.js"></script>
-<script src="/uikit-3.1.5/js/uikit.min.js"></script>
