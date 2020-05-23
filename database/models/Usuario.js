@@ -40,6 +40,6 @@ module.exports = function (sequelize, DataTypes){
   //      });
   //  }
 
- //   return Usuario;
+    return Usuario;
 
 }
