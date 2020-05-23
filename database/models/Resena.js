@@ -1,5 +1,5 @@
 
-module.exports = function (sequelize, dataTypes){
+module.exports = function (sequelize, DataTypes){
     const alias = 'Resena';
 
     const cols = {
@@ -40,6 +40,9 @@ module.exports = function (sequelize, dataTypes){
     Resena.associate = function(models){
         Resena.belongsTo(models.Pelicula, {
             as: "usuarios",
+            //through que? donde lo creo?
+            // through: "usuario_pelicula",
+            //fin de pregunta
             foreignKey: "resena_id",
             otherKey: "usuario_id"
         });
