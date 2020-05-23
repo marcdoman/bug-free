@@ -1,7 +1,7 @@
 
 module.exports = function (sequelize, DataTypes){
-    const alias = sequelize.define(
-        'Resena',{
+    const Resena = sequelize.define(
+        'Resenas',{
 
         id: {
             type: DataTypes.INTEGER,
@@ -36,18 +36,15 @@ module.exports = function (sequelize, DataTypes){
     }
     );
 
-    //const Resena = sequelize.define(alias, cols, config);    
+    
 
   //  Resena.associate = function(models){
-   //     Resena.belongsTo(models.Pelicula, {
-     //       as: "usuarios",
-            //through que? donde lo creo?
-            // through: "usuario_pelicula",
-            //fin de pregunta
-       //     foreignKey: "resena_id",
-         //   otherKey: "usuario_id"
-       // });
-   // }
+ //       Resena.belongsTo(models.Pelicula, {
+   //        as: "usuarios",
+   //         foreignKey: "resena_id",
+   //         otherKey: "usuario_id"
+   //     });
+  //  }
 
  //return Resena;
 
