@@ -2,7 +2,6 @@
 module.exports = function (sequelize, DataTypes){
     const Resena = sequelize.define(
         'Resenas',{
-
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -10,11 +9,9 @@ module.exports = function (sequelize, DataTypes){
         },
         pelicula_id: {
             type: DataTypes.INTEGER,
-
         },
         usuario_id: {
             type: DataTypes.INTEGER,
-
         },
         texto_resena: {
             type: DataTypes.STRING,
@@ -24,11 +21,9 @@ module.exports = function (sequelize, DataTypes){
         },
         fecha_creacion:{
             type: DataTypes.DATE,
-
         },
         fecha_actualizacion:{
             type: DataTypes.DATE,
-
         }       
     },
      {
