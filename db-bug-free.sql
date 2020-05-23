@@ -10,8 +10,6 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 	`email` varchar(255) NOT NULL UNIQUE,
 	`password` varchar(255) NOT NULL,
 	`fecha_nacimiento` datetime NOT NULL,
-	`fecha_creacion` timestamp NULL DEFAULT NULL,
-	`fecha_actualizacion` timestamp NULL DEFAULT NULL
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `resenas` (
