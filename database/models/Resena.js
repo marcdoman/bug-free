@@ -41,6 +41,6 @@ module.exports = function (sequelize, DataTypes){
    //     });
   //  }
 
- //return Resena;
+   return Resena;
 
 }
