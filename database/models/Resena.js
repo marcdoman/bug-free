@@ -37,6 +37,17 @@ module.exports = function (sequelize, DataTypes){
     };
     const Resena = sequelize.define(alias, cols, config);    
 
+    Resena.associate = function(models){
+        Resena.belongsTo(models.Pelicula, {
+            as: "usuarios",
+            //through que? donde lo creo?
+            // through: "usuario_pelicula",
+            //fin de pregunta
+            foreignKey: "resena_id",
+            otherKey: "usuario_id"
+        });
+    }
+
  return Resena;
 
 }
