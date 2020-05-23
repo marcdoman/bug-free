@@ -6,24 +6,44 @@ let funcion = {
     detalle: function (req, res) {
         res.render('detallePelicula');
     }
+
 }
    
    module.exports = funcion; 
 
+   //o algo estilo asi:
 
-//    let funcion = {
-//     // Detalle de una película
-//     detalle: function (req, res) {
-//         res.render('detallePelicula', {
-//             listaResenas: [nombreTabla]
-//         });
+// const db = require('../database/models');
+
+// module.exports = {
+//     index: (req, res) => {
+//         db.Movies
+//         .findAll()
+//         .then(movies => {
+//             res.render("moviesList", {
+//                 listaPeliculas: movies
+//             })
+//         })
 //         .catch(error => {
 //             res.send(error);
 //         })
-//     }
-// }
-   
-//    module.exports = funcion; 
+        
+//     },
 
+//     create: (req, res) => {
+//         return res.render('moviesCreateForm');
+//     },
 
-//    ignorar
+//     store: (req, res) => {
+//         db.Movies  
+//             .create(req.body)
+//             .then(movieGuardada => {
+//                 return res.redirect("/movies");
+//             })
+//             .catch(error => {
+//                 res.send(error);
+//             })
+
+//     },
+    
+// };
