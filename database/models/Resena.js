@@ -1,53 +1,54 @@
 
 module.exports = function (sequelize, DataTypes){
-    const alias = 'Resena';
+    const alias = sequelize.define(
+        'Resena',{
 
-    const cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         pelicula_id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
 
         },
         usuario_id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
 
         },
         texto_resena: {
-            type: dataTypes.STRING,
+            type: DataTypes.STRING,
         },
         puntaje: {
-            type: dataTypes.DECIMAL,
+            type: DataTypes.DECIMAL,
         },
         fecha_creacion:{
-            type: dataTypes.DATE,
+            type: DataTypes.DATE,
 
         },
         fecha_actualizacion:{
-            type: dataTypes.DATE,
+            type: DataTypes.DATE,
 
-        },       
-    };
-    
-    const config = {
+        }       
+    },
+     {
         timestamps: false
-    };
-    const Resena = sequelize.define(alias, cols, config);    
+    }
+    );
 
-    Resena.associate = function(models){
-        Resena.belongsTo(models.Pelicula, {
-            as: "usuarios",
+    //const Resena = sequelize.define(alias, cols, config);    
+
+  //  Resena.associate = function(models){
+   //     Resena.belongsTo(models.Pelicula, {
+     //       as: "usuarios",
             //through que? donde lo creo?
             // through: "usuario_pelicula",
             //fin de pregunta
-            foreignKey: "resena_id",
-            otherKey: "usuario_id"
-        });
-    }
+       //     foreignKey: "resena_id",
+         //   otherKey: "usuario_id"
+       // });
+   // }
 
- return Resena;
+ //return Resena;
 
 }

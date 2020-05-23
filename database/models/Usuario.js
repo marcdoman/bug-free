@@ -1,32 +1,36 @@
 
 module.exports = function (sequelize, DataTypes){
-    const alias = 'Usuario';
+    const alias = sequelize.define(
+        'Usuario', {
 
-    const cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
         nombre_usuario: {
-            type: dataTypes.STRING,
-
+            type: DataTypes.STRING,
         },
+
         email: {
-            type: dataTypes.STRING,
+            type: DataTypes.STRING,
         },
-        password: {
-            type: dataTypes.STRING,
-        },
-        fecha_nacimiento:{
-            type: dataTypes.DATE,
 
+        password: {
+            type: DataTypes.STRING,
         },
-    };
+
+        fecha_nacimiento:{
+            type: DataTypes.DATE,
+        },
+    },
     
-    const config = {
+    {
         timestamps: false
-    };
+    }
+    );
+
+
     const Usuario = sequelize.define(alias, cols, config);    
 
     Usuario.associate = function(models){
