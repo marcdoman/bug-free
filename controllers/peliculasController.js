@@ -1,3 +1,6 @@
+const db = require('../database/models');
+
+
 let funcion = {
     // Detalle de una película
     detalle: function (req, res) {
