@@ -25,4 +25,9 @@ router.get('/misResenas', misResenasController.misResenas);
 // router.get('/:error?', peliculasController.findByPk);
 router.post('/resena/:id', peliculasController.create);
 
+router.post('/resena/:id', misResenasController.delete);
+router.post('/resena/:id', misResenasController.editar);
+//2 above estan bien??
+
+
 module.exports = router;
