@@ -178,11 +178,10 @@
  <% for(let i=0; i<listaResenas.length; i++){ %>
     <li>
          <p>Resena: <%= listaResenas[i].texto_resena %></p> 
+        //usuarios/usuario? ->
+         <p>Usuario: <%= listaResenas[i].usuarios.nombre_usuario %></p>
         
-         <p>Nombre Usuario: <%= listaResenas[i].usuario_id %></p>
-        
-
-        Puntaje: <%= listaResenas[i].puntaje %></p>
+        <p>Puntaje: <%= listaResenas[i].puntaje %></p>
         <p>Fecha Actualizacion: <%= listaResenas[i].fecha_actualizacion %></p> 
 
     </li>

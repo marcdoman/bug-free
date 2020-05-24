@@ -1,5 +1,5 @@
 const db = require('../database/models');
-
+const op = db.Sequelize.Op;
 
 let funcion = {
     // Detalle de una película
@@ -11,39 +11,33 @@ let funcion = {
    
    module.exports = funcion; 
 
-   //o algo estilo asi:
+//aca nm --> 
 
-// const db = require('../database/models');
-
-// module.exports = {
-//     index: (req, res) => {
-//         db.Movies
-//         .findAll()
-//         .then(movies => {
-//             res.render("moviesList", {
-//                 listaPeliculas: movies
-//             })
+// const detalleController = {
+//     findByPk: function (req, res){
+//         db.Resena.findAll({
+//             where: {pelicula_id: req.query.idPelicula},
+//             include: {association: 'usuario'}
 //         })
-//         .catch(error => {
-//             res.send(error);
+//         .then(resultados => {
+//             res.render('detalle', {dato: req.query.idPelicula, resenas: resultados, error: req.params.error});
 //         })
-        
 //     },
 
-//     create: (req, res) => {
-//         return res.render('moviesCreateForm');
-//     },
-
-//     store: (req, res) => {
-//         db.Movies  
-//             .create(req.body)
-//             .then(movieGuardada => {
-//                 return res.redirect("/movies");
-//             })
-//             .catch(error => {
-//                 res.send(error);
-//             })
-
-//     },
-    
-// };
+//     agregarResena: function (req, res){
+//         moduloLogin.validar(req.body.email, req.body.password)
+//         .then (resultado =>{
+//             if(resultado != undefined){
+//                 let review = {
+//                     pelicula_id: req.params.id,
+//                     usario_id: resultado.id,
+//                     resena: req.body.resena,
+//                     puntaje: req.body.puntaje
+//                 }
+//                 //un poco mas
+//             }else{
+//                 //codigo
+//             }
+//         })
+//     }
+// }
