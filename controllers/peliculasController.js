@@ -16,7 +16,18 @@ let detallePeliculaCont = {
     },
     // addResena: function(req, res){
     //     //codigo?
-    //     //validar aca?
+    //     //donde uso addResena, en ejs?
+    //     //validar aca? como?
+    //     function validate (){
+    //         if(){
+    //             //codigo
+    //         } else {
+    //             alert("validation failed")
+    //             //aca redirect to registro, con windows.location?
+    //             //algo tipo:
+    //             //window.location.href = '...'
+    //         }
+    //     }
     //     .then(resultado =>{
     //         if(resultado != undefined){
     //             //codigo
