@@ -36,8 +36,8 @@ module.exports = function (sequelize, DataTypes){
   //  Resena.associate = function(models){
  //       Resena.belongsTo(models.Pelicula, {
    //        as: "usuarios",
-   //         foreignKey: "resena_id",
-   //         otherKey: "usuario_id"
+   //        foreignKey: "resena_id",
+   //        otherKey: "usuario_id"
    //     });
   //  }
 

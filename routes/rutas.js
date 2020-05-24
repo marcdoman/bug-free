@@ -18,6 +18,6 @@ router.get('/buscar/resultados', buscadorController.resultados);
 router.get('/peliculas/detalle', peliculasController.detalle);
 
 // router.get('/:error?', peliculasController.findByPk);
-router.post('/resena/:id', peliculasController.agregarResena);
+router.post('/resena/:id', peliculasController.addResena);
 
 module.exports = router;
