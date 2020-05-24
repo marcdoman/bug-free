@@ -14,18 +14,17 @@ let detallePeliculaCont = {
         res.render('detallePelicula');
         //que mas agregar al res.render?
     },
-    // addResena: function(req, res){
+    // create: function(req, res){
     //     //codigo?
-    //     //donde uso addResena, en ejs?
+    //     //donde uso create?, en ejs?
     //     //validar aca? como?
     //     function validate (){
     //         if(){
     //             //codigo
     //         } else {
     //             alert("validation failed")
-    //             //aca redirect to registro, con windows.location?
-    //             //algo tipo:
-    //             //window.location.href = '...'
+    //             res.redirect('/registro')
+                //este redirect esta bien?
     //         }
     //     }
     //     .then(resultado =>{
@@ -40,3 +39,7 @@ let detallePeliculaCont = {
 }
    
    module.exports = detallePeliculaCont; 
+
+
+   //o mas tipo?:
+//    db.Resena.create()
