@@ -11,110 +11,14 @@
   </head>
   <body>
 
+
+
 <!-- empieza el header -->
 
-<header >
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <!-- El enlace del logo ahora apunta a la raíz "/" del sitio -->
-      <a class="navbar-brand" href="/"> <img src="https://pa1.narvii.com/6212/3f97bf5294b0f2392aec2dd6bb2d00b2881fb766_hq.gif" width="160" height="64.5" class="d-inline-block align-top rounded-circle" alt=""></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link bienvenido" href="#"> </a>
-          </li>
-        </ul>
-
-        <!-- Se cambia el action del form para que apunte a la ruta que renderiza la vista de resultados -->
-  
-        <form   class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="get"  action="/buscar/resultados"  >
-          <input class="form-control mr-sm-2" name="buscador" type="search" placeholder="Search" aria-label="Search">
-          <button  class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-  
-  
-        <ul class="navbar-nav ml-auto">
-  
-          <li class="nav-item dropdown ">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Géneros
-            </a>
-            <div class="dropdown-menu listaGeneros" id="generos" aria-labelledby="navbarDropdown listadoGeneros">
-  
-              <div class="dropdown-divider"></div>
-  
-            </div>
-          </li>
-  
-  
-          <!-- <li class="nav-item">
-            <a class="nav-link favoritas" href="/">favoritas</a>
-          </li> -->
-  
-  
-          <div class="log">
-            <li class="nav-item active">
-              <button type="button" class="btn btn-primary log" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Log in </button>
-            </li>
-          </div>
-  
-        </ul>
-      </div>
-    </nav>
-  </header>
-  
-
-<!-- boton de log in -->
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><strong>Alto ahi cowboy</strong></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form id="form">
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nombre:</label>
-            <input type="text" class="form-control" id="name">
-          </div>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Email:</label>
-            <input type="email" class="form-control" id="email">
-          </div>
-          <div class="">
-          <label class="mr-sm-2" for="inlineFormCustomSelect">Cual es tu género?</label>
-          <select class="form-control form-control-sm" id="genre">
-            <option selected value="0">Elegir...</option>
-             <option value="masculino">Hombre</option>
-             <option value="femenino">Mujer</option>
-          </select>
-        </div> <br>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-            <label class="form-check-label" for="autoSizingCheck">
-              Recordar mi información
-            </label>
-          </div>
-          </div>
-          <div class="modal-footer">
-             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-             <button type="submit" class="btn btn-primary">Send message</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+<%- include('./partials/header.ejs') %>
 
 <!-- termina el header -->
+
 
 <div class="container-fluid" >
 
