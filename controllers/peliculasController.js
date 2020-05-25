@@ -7,7 +7,8 @@ let detallePeliculaCont = {
             include: [{association: 'usuarios'}]
         })
         .then(resultado =>{
-            res.render('detallePelicula', {info: req.query.pelicula_id, listaResenas: resultado, error: req.params.error});
+            res.render('detallePelicula', {pelicula_id: req.query.pelicula_id, listaResenas: resultado, error: req.params.error});
+            //esta bien llamarlo pelicula_id?
         })
         .catch(error => {
             res.send(error);
@@ -15,12 +16,12 @@ let detallePeliculaCont = {
    },
     
     create: function(req, res){
-    //     login.validate(req.body.email, req.body.password){
+        // Usuario.validate(req.body.email, req.body.password){
     //         .then(resultado =>{
     //             if(resultado != undefined){
     //                 const resena = {
-    //                     pelicula_id: ,
-    //                     usuario_id: ,
+    //                     pelicula_id: req.query.pelicula_id,
+    //                     usuario_id: resultado.usuario_id,
     //                     //en esos que va?
     //                     resena: req.body.resena,
     //                     puntaje: req.body.puntaje

@@ -1,29 +1,36 @@
+const db = require('../database/models');
+const op = db.Sequelize.Op;
+
 let funcion = {
     // mis resenas del sitio web
     misResenas: function (req, res) {
         res.render('misResenas');
     },
     delete: function (req, res) {
-        //db.Resena.destroy()
+        db.Resena.destroy()
         //bien?
     },
     editar: function (req, res) {
-       //findbyPk en editar
-       //resena/editar/id de resena
+        db.Resena.findByPk() 
+        .then(resultado =>{
+            // no --> res.render('detallePelicula', {pelicula_id: req.query.pelicula_id, error: req.params.error});
+        })
+        //aca tiene que recuperar los datos 
+        //resena/editar/id de resena
        //aca recuperar y ver que datos nuevos queres meter
         //put
        // db.Resena.update()
     //    bien?
-    }
-    // confirmar: 
+    },
+    confirmarEdit: function (req, res) {
+        db.Resena.update
+        //aca se mandan los datos editados
+        //validar que usuario exista
+
     //post
+    }
 }
    
 module.exports = funcion; 
 
-//o mas tipo db.Resena.update??? --> editar
-// y db.Resena.destroy --> delete
-
-//also add confirm edit? --> ahi, db.Resena.update()
-//uno que se encarga de recuperar datos y otro mandar lo nuevo
 //en 2) validar que usuario exista, etc. 
