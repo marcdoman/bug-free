@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registracion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/registracion.css">
+    <link rel="stylesheet" href="/uikit-3.1.5/css/uikit.min.css" />
+</head>
+
+<body>
+    
+<!-- empieza el header -->
+
+<%- include('./partials/header.ejs') %>
+
+<!-- termina el header -->
+
+
+<form action="action_page.php">
+    <div class="container">
+        <b><h1>Este es el formulario de registración</h1></b>
+      <p>Por favor rellenar los campos asi tenemos una buena nota</p>
+      <hr>
+  
+      <label for="username"><b>Nombre de usuario campeón:</b></label>
+      <input type="text" placeholder="Usuario" name="username">
+
+      <label for="email"><b>Email:</b></label>
+      <input type="text" placeholder="Ingresar email" name="email" required>
+  
+      <label for="psw"><b>Contraseña:</b></label>
+      <input type="password" placeholder="Ingresar contraseña" name="psw" required>
+  
+      <label for="birthday"><b>Fecha de nacimiento:</b></label> <br>
+      <input type="date" id="nacimiento" name="birthday">
+      <br><br>
+
+      <button type="submit" class="registerbtn">Registrar</button>
+    </div>
+  
+
+  </form>
+
+  <!-- footer y links a js -->
+
+<%- include('./partials/footer.ejs') %>
+
+<%- include('./partials/links.ejs') %>
+
+</body>
+</html>
