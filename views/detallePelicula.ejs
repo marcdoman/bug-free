@@ -46,7 +46,7 @@
 
 </div>
 
-<!-- codigo para resenas 
+<!-- codigo para resenas  -->
    <h2>Escriba tus resenas:</h2> 
     <form action="/resena/:id" method="post">
         <label>Email:</label>
@@ -68,13 +68,27 @@
         <br><br>
         <button type="submit" value="submit" name="submit">Guardar</button>
 
-    </form> -->
+    </form>
 
     <!-- fin de codigo para resenas -->
 
 
-<!--aca va el codigo de las resenas que te mande por whatsapp-->>
+<!-- codigo de listado de resenas -->
+<h2>Resenas:</h2>
+<ul>
+  <% for(let i=0; i<listaResenas.length; i++){ %>
+    <li>
+         <p>Resena: <%= listaResenas[i].texto_resena %></p> 
+         <p>Usuario: <%= listaResenas[i].usuarios.nombre_usuario %></p>
+         <p>Puntaje: <%= listaResenas[i].puntaje %></p>
+        <p>Fecha Actualizacion: <%= listaResenas[i].fecha_actualizacion %></p> 
 
+    </li>
+ <% } %> 
+</ul>    
+
+
+   <!-- fin codigo de listado de resenas-->
 
 
 

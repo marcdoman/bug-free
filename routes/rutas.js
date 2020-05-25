@@ -32,11 +32,15 @@ router.get('/registracion', registracionController.registracion);
 
 
 
-// router.get('/:error?', peliculasController.findByPk);
-//router.post('/resena/:id', peliculasController.create);
+router.get('/:error?', peliculasController.findByPk);
 
-//router.post('/resena/:id', misResenasController.delete);
-//router.post('/resena/:id', misResenasController.editar);
+router.post('/resena/index/:id', peliculasController.index);
+//above? o era get?
+
+router.post('/resena/create/:id', peliculasController.create);
+
+router.post('/resena/delete/:id', misResenasController.delete);
+router.post('/resena/edit/:id', misResenasController.editar);
 //2 above estan bien??
 
 
