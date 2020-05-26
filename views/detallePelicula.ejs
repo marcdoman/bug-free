@@ -51,6 +51,9 @@
     <form action="/resena/:id" method="post">
         <label>Email:</label>
         <input type="email" name="email" required="required">
+      <!-- <%if(error) { %> 
+             <p>Email incorrecto</p>
+           <% }%>  -->
         <br>
 
         <label>Contrasena:</label>
@@ -81,7 +84,10 @@
          <p>Resena: <%= listaResenas[i].texto_resena %></p> 
          <p>Usuario: <%= listaResenas[i].usuarios.nombre_usuario %></p>
          <p>Puntaje: <%= listaResenas[i].puntaje %></p>
-        <p>Fecha Actualizacion: <%= listaResenas[i].fecha_actualizacion %></p> 
+        <!-- <p>Fecha Actualizacion: <%= listaResenas[i].fecha_actualizacion %></p> 
+        <p>Fecha Creacion: <%= listaResenas[i].fecha_creacion %></p>  -->
+         <!-- como hacer para esto?? -->
+
 
     </li>
  <% } %> 

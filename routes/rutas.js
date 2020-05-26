@@ -39,8 +39,10 @@ router.post('/resena/index/:id', peliculasController.index);
 
 router.post('/resena/create/:id', peliculasController.create);
 
-router.post('/resena/delete/:id', misResenasController.delete);
-router.post('/resena/edit/:id', misResenasController.editar);
+router.post('/misResenas/delete/:id', misResenasController.delete);
+router.post('/misResenas/edit/:id', misResenasController.editar);
+router.post('/misResenas/confirmarEdit/:id', misResenasController.confirmarEdit);
+
 //2 above estan bien??
 
 

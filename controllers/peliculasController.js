@@ -1,5 +1,7 @@
 const db = require('../database/models');
 const op = db.Sequelize.Op;
+// const login = require(...)
+//above para create --> cuando marc haya creado el login
 
 let detallePeliculaCont = {
    index: function (req, res) {
@@ -16,7 +18,7 @@ let detallePeliculaCont = {
    },
     
     create: function(req, res){
-        // Usuario.validate(req.body.email, req.body.password){
+    //     login.validate(req.body.email, req.body.password){
     //         .then(resultado =>{
     //             if(resultado != undefined){
     //                 const resena = {
