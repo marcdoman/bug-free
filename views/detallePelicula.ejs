@@ -50,22 +50,23 @@
    <h2>Escriba tus resenas:</h2> 
     <form action="/resena/:id" method="post">
         <label>Email:</label>
-        <input type="email" name="email" required="required">
+        <input type="email" placeholder="mimail@mail.com" name="email" required="required">
       <!-- <%if(error) { %> 
              <p>Email incorrecto</p>
            <% }%>  -->
         <br>
 
         <label>Contrasena:</label>
-        <input type="text" name="password">
+        <input type="text" placeholder="password123" name="password">
         <br>
 
         <label>Resena:</label>
-        <input type="text" name="texto_reseno">
+        <input type="text" placeholder="Tremenda pelicula!" name="texto_reseno">
         <br>
 
         <label>Puntaje:</label>
         <input type="integer" name="puntaje">
+        <!-- aca placeholder? -->
         <br>
 
         <br><br>
@@ -87,7 +88,7 @@
         <!-- <p>Fecha Actualizacion: <%= listaResenas[i].fecha_actualizacion %></p> 
         <p>Fecha Creacion: <%= listaResenas[i].fecha_creacion %></p>  -->
          <!-- como hacer para esto?? -->
-
+          
 
     </li>
  <% } %> 
