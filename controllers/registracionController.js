@@ -38,4 +38,3 @@ let funcion = {
     };
    
 module.exports = funcion; 
-
