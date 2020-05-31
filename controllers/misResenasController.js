@@ -1,33 +1,33 @@
-const db = require('../database/models');
-const op = db.Sequelize.Op;
+//const db = require('../database/models');
+//const op = db.Sequelize.Op;
 
-let funcion = {
+//let funcion = {
     // mis resenas del sitio web
-    misResenas: function (req, res) {
-        res.render('misResenas');
-    },
-    delete: function (req, res) {
-        db.Resena.destroy()
+    //misResenas: function (req, res) {
+     //   res.render('misResenas');
+   // },
+   // delete: function (req, res) {
+    //    db.Resena.destroy()
         //esto aca o en borrarResena??
       //  res.redirect('/borrarResena')
       //esto?
 
         //bien?
-    },
-    editar: function (req, res) {
-        db.Resena.findByPk() 
-        .then(resultado =>{
+  //  },
+  //  editar: function (req, res) {
+     //   db.Resena.findByPk() 
+     //   .then(resultado =>{
             // no --> res.render('detallePelicula', {pelicula_id: req.query.pelicula_id, error: req.params.error});
-        })
+     //   })
         //aca tiene que recuperar los datos 
         //resena/editar/id de resena
        //aca recuperar y ver que datos nuevos queres meter
         //put
        // db.Resena.update()
     //    bien?
-    },
-    confirmarEdit: function (req, res) {
-        db.Resena.update
+   // },
+   // confirmarEdit: function (req, res) {
+ //       db.Resena.update
         //aca se mandan los datos editados
 
         //validar que usuario exista: (en que cambia al formulario below?)
@@ -51,8 +51,10 @@ let funcion = {
     // }
 
     //post
-    }
-}
+  //  }
+//}
+
+//module.exports = funcion; 
    
-module.exports = funcion; 
+
 

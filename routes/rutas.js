@@ -24,7 +24,7 @@ router.get('/buscar/resultados', buscadorController.resultados);
 router.get('/peliculas/detalle', peliculasController.detalle);
 
 //Resena de un usuario
-router.get('/misResenas', misResenasController.misResenas);
+//router.get('/misResenas', misResenasController.misResenas);
 
 //Formulario registracion
 router.get('/registracion', registracionController.registracion);
@@ -32,16 +32,16 @@ router.get('/registracion', registracionController.registracion);
 
 
 
-router.get('/:error?', peliculasController.findByPk);
+//router.get('/:error?', peliculasController.findByPk);
 
-router.post('/resena/index/:id', peliculasController.index);
+//router.post('/resena/index/:id', peliculasController.index);
 //above? o era get?
 
-router.post('/resena/create/:id', peliculasController.create);
+//router.post('/resena/create/:id', peliculasController.create);
 
-router.post('/misResenas/delete/:id', misResenasController.delete);
-router.post('/misResenas/edit/:id', misResenasController.editar);
-router.post('/misResenas/confirmarEdit/:id', misResenasController.confirmarEdit);
+//router.post('/misResenas/delete/:id', misResenasController.delete);
+//router.post('/misResenas/edit/:id', misResenasController.editar);
+//router.post('/misResenas/confirmarEdit/:id', misResenasController.confirmarEdit);
 
 //2 above estan bien??
 
