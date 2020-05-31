@@ -39,9 +39,10 @@ router.get('/registracion', registracionController.registracion);
 
 //router.post('/resena/create/:id', peliculasController.create);
 
-//router.post('/misResenas/delete/:id', misResenasController.delete);
-//router.post('/misResenas/edit/:id', misResenasController.editar);
-//router.post('/misResenas/confirmarEdit/:id', misResenasController.confirmarEdit);
+//router.post('/deleteResena/:id', deleteResenaController.delete);
+    //o tipo : //router.post('/deleteResena/delete/:id', deleteResenaController.delete); -- idem below
+//router.post('/editResena/:id', editResenaController.editar);
+//router.post('/editResena/:id', editResenaController.confirmarEdit);
 
 //2 above estan bien??
 
