@@ -27,7 +27,7 @@ let funcion = {
             db.Usuarios  
                 .create(req.body)
                 .then(usuarioGuardado => {
-                    return res.redirect("/index");
+                    return res.redirect("/");
                 })
                 .catch(error => {
                     res.send(error);
