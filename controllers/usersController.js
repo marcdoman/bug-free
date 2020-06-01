@@ -4,7 +4,9 @@ let funcion = {
 //lo demas que vaya necesitando //ex: metodo de traer imagen del usuario  
 
 
-
+    registro: function (req, res) {
+        
+    },
     logIn: function (req, res) {
         res.render('logIn');
     },

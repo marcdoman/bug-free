@@ -44,10 +44,8 @@ let funcion = {
           //aca o un --> si where
        })
        .then(()=>{
-         db.Resena.findByPk(req.params.id)
-         .then(result =>{
+        
            res.redirect('/misResenas')
-         })
        })
 
    },

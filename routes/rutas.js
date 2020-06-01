@@ -8,7 +8,7 @@ const buscadorController = require('../controllers/buscadorController');
 const peliculasController = require('../controllers/peliculasController');
 const misResenasController = require('../controllers/misResenasController');
 const registracionController = require('../controllers/registracionController');
-const logInController = require('../controllers/usersController');
+const usersController = require('../controllers/usersController');
 
 
 
@@ -39,11 +39,12 @@ router.post('/registracion', registracionController.guardado);
 //fin de userController
 
 //Log In
-router.get('/logIn', logInController.logIn);
+// router.get('/logIn', logInController.logIn);
 
 //MisResena de un usuario
-// router.get('/misResenas', usersController.logIn);
-// router.post('/misResenas', usersController.confirmarUsuario);
+router.get('/misResenas', usersController.logIn);
+router.post('/misResenas', usersController.confirmarUsuario);
+
 router.get('/misResenas', misResenasController.listaMisResenas);
 router.get('/misResenas/:id', misResenasController.misResenas);
 router.get('/misResenas/editar/:id', misResenasController.editar);

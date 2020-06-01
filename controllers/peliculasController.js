@@ -1,5 +1,5 @@
-//const db = require('../database/models');
-//const op = db.Sequelize.Op;
+const db = require('../database/models');
+const op = db.Sequelize.Op;
 // const login = require(...)
 //above para create --> cuando marc haya creado el login
 
@@ -7,7 +7,15 @@
 let funcion = {
 //     Detalle de una pelicula
     detalle: function (req, res) {
-        res.render('detallePelicula');
+        //obtener el id que tengo en el navegador 
+
+    //tambein enviar todas las resenas que encuentre de la pelicula con la query q estoy capturando id
+    //find all 
+
+        res.render('detallePelicula', {
+            id_pelicula: req.query.id,
+            // listado de todos los reiews
+        });
     }
 }
    
