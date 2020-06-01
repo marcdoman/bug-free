@@ -8,14 +8,6 @@ let funcion = {
 //crear metodo que busque las resenas, y en el res.render a la vista que tengo, le =pase como segundo parametro la resenas (la lista)
 //no funcion
     },
-    loginUsuario: function (req, res) {
-
-
-    },
-    confirmarUsuario: function (req, res) {
-//en controlador en usuario
-
-    },
     misResenas: function (req, res) {
       db.Resena.findAll({
         where: {usuario_id: req.params.id},
@@ -57,27 +49,6 @@ let funcion = {
            res.redirect('/misResenas')
          })
        })
-
-        //validar que usuario exista: (en que cambia al formulario below?)
-        // Usuario.validate(req.body.email, req.body.password){
-    //         .then(resultado =>{
-    //             if(resultado != undefined){
-    //                 const resena = {
-    //                     pelicula_id: req.query.pelicula_id,
-    //                     usuario_id: resultado.usuario_id,
-    //                     //en esos que va?
-    //                     resena: req.body.resena,
-    //                     puntaje: req.body.puntaje
-    //                 }
-    //                 db.Resena.create(resena)
-    //         // en el objeto, que tambien tenga fecha_act --> aca pones a mano la fecha actual (en seuelize hay forma de poner el now)
-    //         } else {
-    //             res.redirect('/registro')
-    //             //si?
-    //         }
-    //     })
-    // }
-    //todo esto en loginController
 
    },
 

@@ -8,7 +8,7 @@ const buscadorController = require('../controllers/buscadorController');
 const peliculasController = require('../controllers/peliculasController');
 const misResenasController = require('../controllers/misResenasController');
 const registracionController = require('../controllers/registracionController');
-const logInController = require('../controllers/logInController');
+const logInController = require('../controllers/usersController');
 
 
 
@@ -24,15 +24,25 @@ router.get('/buscar/resultados', buscadorController.resultados);
 // Detalle de una película
 router.get('/peliculas/detalle', peliculasController.detalle);
 
-//Log In
-router.get('/logIn', logInController.logIn);
+
+
 
 //Formulario registracion
 router.get('/registracion', registracionController.crear);
 router.post('/registracion', registracionController.guardado);
-//fin 
+
+//userController
+// router.get('/', usersController.logIn);
+// router.post('/', usersController.confirmarUsuario);
+
+//fin de userController
+
+//Log In
+router.get('/logIn', logInController.logIn);
 
 //MisResena de un usuario
+// router.get('/misResenas', usersController.logIn);
+// router.post('/misResenas', usersController.confirmarUsuario);
 router.get('/misResenas', misResenasController.listaMisResenas);
 router.get('/misResenas/:id', misResenasController.misResenas);
 router.get('/misResenas/editar/:id', misResenasController.editar);

@@ -15,23 +15,32 @@
 
 <!-- termina el header -->
 
-   <b><h1>Este es el login por el que pasan todas las paginas de login</h1></b> 
+   <b><h1>LOGIN</h1></b> 
+   <!-- above? -->
     
     <form action="action_page.php">
+      <!-- que action? -->
         <div class="container">
-            
-          <hr>
+
+          <label>Nombre Usuario:</label>
+          <input type="email" placeholder="John Doe" name="username" required="required">
+          <br>
+
+          <label>Email:</label>
+          <input type="email" placeholder="mimail@mail.com" name="email" required="required">
+          <br>
       
-          <input type="text" placeholder="Usuario" name="username">
-    
-          <input type="password" placeholder="Ingresar contraseña" name="psw" required>
-      
+          <label>Contrasena:</label>
+          <input type="password" placeholder="password123" name="password">
+          <br>
+                
           <br><br>
     
-          <button type="submit" class="registerbtn" onclick="document.location.href='http://localhost:3000/misResenas'">Ir a tus reseñas</button>
+          <button type="submit" class="registerbtn">Ir a tus reseñas</button>
+                <!--  ya tengo redirect en usersController -- cuenta?-->
+                <!-- cambiar class? -->
           
         </div>
-      
     
       </form>
 
