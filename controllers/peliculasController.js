@@ -5,7 +5,7 @@
 
 
 let funcion = {
-    // Detalle de una pelicula
+//     Detalle de una pelicula
     detalle: function (req, res) {
         res.render('detallePelicula');
     }
@@ -15,19 +15,22 @@ module.exports = funcion;
 
 
 //let detallePeliculaCont = {
-//   index: function (req, res) {
-//        db.Resena.findAll({
-//            include: [{association: 'usuarios'}]
-//        })
-//        .then(resultado =>{
-//            res.render('detallePelicula', {pelicula_id: req.query.pelicula_id, listaResenas: resultado, error: req.params.error});
+//   index:  (req, res) => {
+//        db.Resenas.findAll()
+        //    include: [{association: 'usuarios'}]
+        
+        
+//        .then(resenas =>{
+//            res.render('detallePelicula');
             //esta bien llamarlo pelicula_id?
 //        })
 //        .catch(error => {
 //            res.send(error);
 //        })
-//   },
+//   }
+//}
     
+   //{pelicula_id: req.query.pelicula_id, listaResenas: resultado, error: req.params.error}
   // create: function(req, res){
   //  login.validate(req.body.email, req.body.password){
   //      .then(resultado =>{
@@ -51,4 +54,3 @@ module.exports = funcion;
 //}
    
 //  module.exports = detallePeliculaCont; 
-

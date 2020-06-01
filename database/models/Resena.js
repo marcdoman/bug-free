@@ -1,6 +1,6 @@
 
 module.exports = function (sequelize, DataTypes){
-    const Resena = sequelize.define(
+    const resena = sequelize.define(
         'Resenas',{
         id: {
             type: DataTypes.INTEGER,
@@ -41,6 +41,6 @@ module.exports = function (sequelize, DataTypes){
    //     });
   //  }
 
-   return Resena;
+   return resena;
 
 }
