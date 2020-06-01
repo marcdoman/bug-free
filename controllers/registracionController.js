@@ -1,7 +1,7 @@
 const db = require('../database/models');
 // const OP = DB.Sequelize.OP;
 
-let funcion = {
+let registracion = {
     // Registracion del usuario
         index: (req, res) => {
             db.Usuarios
@@ -37,4 +37,4 @@ let funcion = {
         
     };
    
-module.exports = funcion; 
+module.exports = registracion; 
