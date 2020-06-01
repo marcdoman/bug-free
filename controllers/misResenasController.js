@@ -3,12 +3,17 @@ const op = db.Sequelize.Op;
 
 let funcion = {
     // mis resenas del sitio web
+    
+    listaMisResenas: function (req, res) {
+//crear metodo que busque las resenas, y en el res.render a la vista que tengo, le =pase como segundo parametro la resenas (la lista)
+//no funcion
+    },
     loginUsuario: function (req, res) {
 
 
     },
     confirmarUsuario: function (req, res) {
-
+//en controlador en usuario
 
     },
     misResenas: function (req, res) {
@@ -19,7 +24,7 @@ let funcion = {
         //la tabla de usuarios?
       })
       .then(result =>{
-        res.render('resenas', {resultado: result})
+        res.render('misResenas', {resultado: result})
       })
 
    },
@@ -32,13 +37,11 @@ let funcion = {
             //el error?
        })
         //aca tiene que recuperar los datos 
-        //?resena/editar/id de resena
 
    },
    confirmarEdit: function (req, res) {
              //aca se mandan los datos editados
       const updateResena = {
-        id: req.params.id,
         //hay que aclararlo devuelta? ya lo hize en editar
         resena: req.body.resena,
         puntaje: req.body.puntaje
@@ -46,13 +49,12 @@ let funcion = {
       db.Resena.update({
          resena: updateResena.resena,
          puntaje: updateResena.puntaje,
-        id: updateResena.id
-          //aca o un where?
+          //aca o un --> si where
        })
        .then(()=>{
          db.Resena.findByPk(req.params.id)
          .then(result =>{
-          //  res.redirect('/')
+           res.redirect('/misResenas')
          })
        })
 
@@ -75,20 +77,21 @@ let funcion = {
     //         }
     //     })
     // }
+    //todo esto en loginController
 
    },
 
    delete: function (req, res) {
-    res.render('', {tipo: "delete", deleteId: req.params.id})
+    res.render('deleteResena', {deleteId: req.params.id})
       //aca va el login como primer parametro?
 },
 confirmarDelete: function (req, res) {
+  
   db.Resena.destroy({
     where: {id: req.params.id}
     //hace falta devuelta aclarar esto?
 })
 res.redirect('/misResenas')
-//esto esta bien?
 }
 }
 

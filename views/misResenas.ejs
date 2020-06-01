@@ -28,17 +28,13 @@
 
              <p>Resena: <%= listaMisResenas[i].texto_resena %></p>
              <p>Puntaje: <%= listaMisResenas[i].puntaje %></p>
-            <!-- <p>Fecha Creacion: <%= listaMisResenas[i].fecha_creacion %></p> 
-            <p>Fecha Actualizacion: <%= listaMisResenas[i].fecha_actualizacion %></p>  -->
-                <!-- estos dos?? -->
+
             <br><br>
             
-            <!-- <button type="button"  class="edit" value="editar" onclick="href='/editResena" name="editar">EDITAR</button> -->
-            <!-- <button type="button" class="goTo" value="goToMovie" name="goToMovie">IR A PELICULA</button> -->
-            <!-- <button type="button" class="delete" value="delete" onclick="/deleteResena" name="delete">BORRAR</button> -->
-                    <!-- botones para redirigir, como? -->
-
-
+            <a class="edit" href="/misResenas/editar/<%=listaMisResenas[i].id %>">EDITAR</a>
+            <a class="goTo" href="/detallePelicula/<%=listaMisResenas[i].pelicula_id %>">IR A PELICULA</a>
+            <a class="delete" href="/misResenas/delete/<%=listaMisResenas[i].id %>">BORRAR</a>
+                    
         </li>
      <% } %> 
     </ul>   
