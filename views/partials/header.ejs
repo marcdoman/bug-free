@@ -12,17 +12,27 @@
           <li class="nav-item active">
             <a class="nav-link bienvenido" href="#"> </a>
           </li>
+          <input type="button" value="Mis Reseñas" onclick="document.location.href='http://localhost:3000/logIn'" />
         </ul>
   
         <!-- Se cambia el action del form para que apunte a la ruta que renderiza la vista de resultados -->
   
         <form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="get"  action="/buscar/resultados"  >
           <input class="form-control mr-sm-2" name="buscador" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-  
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">peliculas</button>
+        </form> 
+        
+        <form class="form-inline my-2 my-lg-0 d-flex justify-content-center" method="get"  action="/buscar/resultados"  >
+          <input class="form-control mr-sm-2" name="buscador" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">usuarios</button>
+        </form> 
+        
   
         <ul class="navbar-nav ml-auto">
+
+          
+
+          <input type="button" value="Registrate" onclick="document.location.href='http://localhost:3000/registracion'" />
   
           <li class="nav-item dropdown ">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/uikit-3.1.5/css/uikit.min.css" />
+</head>
+<body>
+    <!-- empieza el header -->
+
+<%- include('./partials/header.ejs') %>
+
+<!-- termina el header -->
+
+   <b><h1>Este es el login por el que pasan todas las paginas de login</h1></b> 
+    
+    <form action="action_page.php">
+        <div class="container">
+            
+          <hr>
+      
+          <input type="text" placeholder="Usuario" name="username">
+    
+          <input type="password" placeholder="Ingresar contraseña" name="psw" required>
+      
+          <br><br>
+    
+          <button type="submit" class="registerbtn" onclick="document.location.href='http://localhost:3000/misResenas'">Registrar</button>
+          
+        </div>
+      
+    
+      </form>
+
+
+    <%- include('./partials/footer.ejs') %>
+
+    <%- include('./partials/links.ejs') %>
+
+</body>
+</html>
