@@ -1,34 +1,52 @@
-//const db = require('../database/models');
-//const op = db.Sequelize.Op;
+const db = require('../database/models');
+const op = db.Sequelize.Op;
 
-//let funcion = {
+let funcion = {
     // mis resenas del sitio web
-    //misResenas: function (req, res) {
-     //   res.render('misResenas');
-   // },
-   // delete: function (req, res) {
-    //    db.Resena.destroy()
-        //esto aca o en borrarResena??
-      //  res.redirect('/borrarResena')
-      //esto?
+    misResenas: function (req, res) {
+      db.Resena.findAll({
+        where: {usuario_id: req.params.id},
+        //creo -- se entiende que es id de usuario
+        include: ["usuarios"]
+        //la tabla de usuarios?
+      })
+      .then(result =>{
+        res.render('resenas', {resultado: result})
+      })
 
-        //bien?
-  //  },
-  //  editar: function (req, res) {
-     //   db.Resena.findByPk() 
-     //   .then(resultado =>{
-            // no --> res.render('detallePelicula', {pelicula_id: req.query.pelicula_id, error: req.params.error});
-     //   })
+   },
+   editar: function (req, res) {
+       db.Resena.findOne({
+            where: [{id: req.params.id}]
+     }) 
+       .then(result =>{
+            res.render('editResena', {result: result, error: req.params.error})
+            //el error?
+       })
         //aca tiene que recuperar los datos 
-        //resena/editar/id de resena
-       //aca recuperar y ver que datos nuevos queres meter
-        //put
-       // db.Resena.update()
-    //    bien?
-   // },
-   // confirmarEdit: function (req, res) {
- //       db.Resena.update
-        //aca se mandan los datos editados
+        //?resena/editar/id de resena
+
+   },
+   confirmarEdit: function (req, res) {
+             //aca se mandan los datos editados
+      const updateResena = {
+        id: req.params.id,
+        //hay que aclararlo devuelta? ya lo hize en editar
+        resena: req.body.resena,
+        puntaje: req.body.puntaje
+      } 
+      db.Resena.update({
+         resena: updateResena.resena,
+         puntaje: updateResena.puntaje,
+        id: updateResena.id
+          //aca o un where?
+       })
+       .then(()=>{
+         db.Resena.findByPk(req.params.id)
+         .then(result =>{
+          //  res.redirect('/')
+         })
+       })
 
         //validar que usuario exista: (en que cambia al formulario below?)
         // Usuario.validate(req.body.email, req.body.password){
@@ -50,11 +68,16 @@
     //     })
     // }
 
-    //post
-  //  }
-//}
+   },
 
-//module.exports = funcion; 
-   
+   delete: function (req, res) {
+    res.render('', {tipo: "delete", deleteId: req.params.id})
 
+},
+confirmDelete: function (req, res) {
+//   db.Resena.destroy()
 
+}
+}
+
+module.exports = funcion;
