@@ -24,7 +24,7 @@ let funcion = {
         },
     
         store: (req, res) => {
-            db.Usuarios  
+            db.Usuario  
                 .create(req.body)
                 .then(usuarioGuardado => {
                     return res.redirect("/");

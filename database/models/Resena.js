@@ -1,7 +1,7 @@
 
 module.exports = function (sequelize, DataTypes){
     const resena = sequelize.define(
-        'Resena',{
+        'Resenas',{
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -35,7 +35,7 @@ module.exports = function (sequelize, DataTypes){
     
 
     resena.associate = function(models){
-        resena.belongsTo(models.Usuario, {
+        resena.belongsTo(models.Usuarios, {
            as: "usuarios",
            foreignKey: "usuario_id"
         });

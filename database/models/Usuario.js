@@ -1,7 +1,7 @@
 
 module.exports = function (sequelize, DataTypes){
     const Usuario = sequelize.define(
-        'Usuario', {
+        'Usuarios', {
 
         id: {
             type: DataTypes.INTEGER,
@@ -35,7 +35,7 @@ module.exports = function (sequelize, DataTypes){
       
 
     Usuario.associate = function(models){
-        Usuario.hasMany(models.Resena, {
+        Usuario.hasMany(models.Resenas, {
             as: "resenas",
             foreignKey: "usuario_id"
         });
