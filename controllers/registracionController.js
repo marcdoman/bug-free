@@ -19,9 +19,11 @@ let registracion = {
                 email: req.body.email,
                 password: req.body.psw,
                 fecha_nacimiento: req.body.birthday,
-            });
-
-            res.redirect("/");
+            })
+            .then(function(parametro){
+                res.redirect("/");
+            })
+            
         }
         
 };
