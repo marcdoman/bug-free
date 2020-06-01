@@ -18,8 +18,9 @@ router.get('/', indexController.home);
 //Resultado generos
 router.get('/generos', generosController.listado);
 
-// Resultados de la búsqueda
-router.get('/buscar/resultados', buscadorController.resultados);
+// Resultados de las búsquedas
+router.get('/buscar/peliculas', buscadorController.peliculas);
+router.get('/buscar/usuarios', buscadorController.usuarios);
 
 // Detalle de una película
 router.get('/peliculas/detalle', peliculasController.detalle);
