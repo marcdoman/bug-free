@@ -27,15 +27,12 @@ router.get('/peliculas/detalle', peliculasController.detalle);
 //Log In
 router.get('/logIn', logInController.logIn);
 
+//Formulario registracion
+router.get('/registracion', registracionController.crear);
+router.post('/registracion', registracionController.guardado);
+
 //Resena de un usuario
 //router.get('/misResenas', misResenasController.misResenas);
-
-//Formulario registracion
-// router.get('/registracion', registracionController.registracion);
-router.get('/registracion', registracionController.index);
-router.get('/registracion', registracionController.create);
-router.get('/registracion', registracionController.store);
-
 
 
 

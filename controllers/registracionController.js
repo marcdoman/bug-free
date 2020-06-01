@@ -1,40 +1,31 @@
 const db = require('../database/models');
-// const OP = DB.Sequelize.OP;
+
+// Registracion del usuario
 
 let registracion = {
-    // Registracion del usuario
-        index: (req, res) => {
+    
+        crear: function(req,res) {
             db.Usuarios
             .findAll()
-            .then(usuarios => {
-                res.render("registracion", {
-                    //o que para primer parametro? o listaUsuarios? 
-                    listaUsuarios: usuarios
+            .then(function(usuarios){
+                return res.render("registracion", {
+                    usuarios: usuarios
                 })
-            })
-            .catch(error => {
-                res.send(error);
-            })
-            
-        },
-    
-        create: (req, res) => {
-            return res.render('registracion');
-            //esto? se refiere al ejs? 
-        },
-    
-        store: (req, res) => {
-            db.Usuario  
-                .create(req.body)
-                .then(usuarioGuardado => {
-                    return res.redirect("/");
-                })
-                .catch(error => {
-                    res.send(error);
-                })
-    
-        },
+            })      
+        },  
+        guardado: function (req, res) {
+            db.Usuarios.create({
+                nombre_usuario: req.body.username,
+                email: req.body.email,
+                password: req.body.psw,
+                fecha_nacimiento: req.body.birthday,
+            });
+
+            res.redirect("/");
+        }
         
-    };
+};
+
+
    
 module.exports = registracion; 

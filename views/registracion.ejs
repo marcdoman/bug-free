@@ -18,14 +18,14 @@
 <!-- termina el header -->
 
 
-<form action="action_page.php">
+<form action="/registracion" method="POST">
     <div class="container">
         <b><h1>Este es el formulario de registración</h1></b>
       <p>Por favor rellenar los campos asi tenemos una buena nota</p>
       <hr>
   
       <label for="username"><b>Nombre de usuario campeón:</b></label>
-      <input type="text" placeholder="Usuario" name="username">
+      <input type="text" placeholder="Usuario" name="username" required>
 
       <label for="email"><b>Email:</b></label>
       <input type="text" placeholder="Ingresar email" name="email" required>
@@ -34,10 +34,10 @@
       <input type="password" placeholder="Ingresar contraseña" name="psw" required>
   
       <label for="birthday"><b>Fecha de nacimiento:</b></label> <br>
-      <input type="date" id="nacimiento" name="birthday">
+      <input type="date" id="nacimiento" name="birthday" required>
       <br><br>
 
-      <button type="submit" class="registerbtn" onclick="document.location.href='http://localhost:3000/'">Registrar</button>
+      <button type="submit" >Registrar</button>
       
     </div>
   
