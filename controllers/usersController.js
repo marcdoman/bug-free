@@ -5,12 +5,13 @@ let bcrypt = require('bcryptjs');
 
 let funcion = {
 
-    registro: function (req, res) {
-        //lo de bcrypt??
-        //tiene que cargar un nuevo usuario a la base de datos
-        //requreiendo a base de datos, llamando a modelo, y usando create! -- objeto con caracteristicas de usuario
+    // registro: function (req, res) {
+    //     //lo de bcrypt??
+    //     //tiene que cargar un nuevo usuario a la base de datos
+    //     //requreiendo a base de datos, llamando a modelo, y usando create! -- objeto con caracteristicas de usuario
 
-    },
+    // },
+    //above sera registracion no?
     logIn: function (req, res) {
         res.render('logIn');
     },
