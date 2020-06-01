@@ -31,8 +31,13 @@ router.get('/logIn', logInController.logIn);
 router.get('/registracion', registracionController.crear);
 router.post('/registracion', registracionController.guardado);
 
-//Resena de un usuario
-//router.get('/misResenas', misResenasController.misResenas);
+//MisResena de un usuario
+router.get('/misResenas/:id', misResenasController.misResenas);
+router.get('/misResenas/editar/:id', misResenasController.editar);
+router.post('/misResenas/editar/:id', misResenasController.confirmarEdit);
+router.get('/misResenas/delete/:id', misResenasController.delete);
+router.post('/misResenas/delete/:id', misResenasController.confirmarDelete);
+//fin de MisResenas de un usuario
 
 
 
@@ -43,12 +48,6 @@ router.post('/registracion', registracionController.guardado);
 
 //router.post('/resena/create/:id', peliculasController.create);
 
-//router.post('/deleteResena/:id', deleteResenaController.delete);
-    //o tipo : //router.post('/deleteResena/delete/:id', deleteResenaController.delete); -- idem below
-//router.post('/editResena/:id', editResenaController.editar);
-//router.post('/editResena/:id', editResenaController.confirmarEdit);
-
-//2 above estan bien??
 
 
 module.exports = router;

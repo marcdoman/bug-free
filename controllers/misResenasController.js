@@ -74,7 +74,7 @@ let funcion = {
     res.render('', {tipo: "delete", deleteId: req.params.id})
 
 },
-confirmDelete: function (req, res) {
+confirmarDelete: function (req, res) {
 //   db.Resena.destroy()
 
 }
