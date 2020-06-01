@@ -19,22 +19,18 @@
 
     <!-- login -->
 
+
     <h2>Borrar tu resena:</h2> 
-    <form action="/resena/:id" method="post">
+    <form action="/misResenas/delete/<%=result.id%>" method="post">
         <!-- es form? -->
-        <h3>Estas seguro de que quieres borrar su resena?</h3>
-        <input type="radio" id="yes" name="sureDelete" value="yes">
-        <label for="yes">Yes</label><br>
-        <input type="radio" id="no" name="sureDelete" value="no">
-        <label for="no">No</label><br>
-        
+        <h3>BORRAR</h3>
+            <!-- //aca pedir mail y contra -->
         <br><br>
-        <button type="submit" value="submit" name="submit">Borrar</button>
+        <a href="/misResenas">GO BACK</a>
+        <button type="submit" value="submit" name="submit">CONFIRM</button>
 
     </form> 
     
-<!-- aca verificacion de usuario -->
-
 
 <!-- footer y links a js -->
 

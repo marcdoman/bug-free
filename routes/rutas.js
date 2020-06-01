@@ -31,10 +31,9 @@ router.get('/logIn', logInController.logIn);
 router.get('/registracion', registracionController.crear);
 router.post('/registracion', registracionController.guardado);
 //fin 
-// router.get('/misResenas/:id', misResenasController.misResenas);
-        //lista mis Resenas
 
 //MisResena de un usuario
+router.get('/misResenas', misResenasController.listaMisResenas);
 router.get('/misResenas/:id', misResenasController.misResenas);
 router.get('/misResenas/editar/:id', misResenasController.editar);
 router.post('/misResenas/editar/:id', misResenasController.confirmarEdit);
