@@ -4,13 +4,12 @@ const moduloLogin = require('../modulo-login');
 let bcrypt = require('bcryptjs');
 
 let funcion = {
-    // Resultados de la búsqueda
-  //si es usuarios --> registro (guardar el usuario nuevo)
-//lo demas que vaya necesitando //ex: metodo de traer imagen del usuario  
-
 
     registro: function (req, res) {
-        
+        //lo de bcrypt??
+        //tiene que cargar un nuevo usuario a la base de datos
+        //requreiendo a base de datos, llamando a modelo, y usando create! -- objeto con caracteristicas de usuario
+
     },
     logIn: function (req, res) {
         res.render('logIn');
@@ -19,8 +18,9 @@ let funcion = {
     confirmarUsuario: function (req, res) {
         //validacion de usuario:
         Usuario.validate(req.body.email, req.body.password)
-            .then(resultado =>{
-                if(resultado == undefined){
+        //o es modulo login??
+            .then(result =>{
+                if(result == undefined){
                     backURL=req.header('Referer') || '/';
                     res.redirect(backURL);
 
