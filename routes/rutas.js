@@ -30,6 +30,9 @@ router.get('/logIn', logInController.logIn);
 //Formulario registracion
 router.get('/registracion', registracionController.crear);
 router.post('/registracion', registracionController.guardado);
+//fin 
+// router.get('/misResenas/:id', misResenasController.misResenas);
+        //lista mis Resenas
 
 //MisResena de un usuario
 router.get('/misResenas/:id', misResenasController.misResenas);
