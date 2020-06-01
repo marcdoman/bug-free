@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peliculas ilegales</title>
+    <title>Borrando Resenas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/deleteResena.css">
     <link rel="stylesheet" href="/uikit-3.1.5/css/uikit.min.css" />
@@ -19,58 +19,21 @@
 
     <!-- login -->
 
-   <!-- % function editPopUp() { %> 
-    %    alert("I am an alert box!"); %>
-    % }  %>  -->
-
-    <!-- que el popup tenga esto (?es el right action?): -->
-    <!-- <h2>Editar tu resena:</h2> 
+    <h2>Borrar tu resena:</h2> 
     <form action="/resena/:id" method="post">
-        <label>Email:</label>
-        <input type="email" placeholder="mimail@mail.com" name="email" required="required">
-        <br>
-
-        <label>Contrasena:</label>
-        <input type="text" placeholder="password123" name="password">
-        <br>
-
-        <label>Resena:</label>
-        <input type="text" placeholder="Tremenda pelicula!" name="texto_reseno">
-        <br>
-
-        <label>Puntaje:</label>
-        <input type="integer" name="puntaje">
-        <br>
-
+        <!-- es form? -->
+        <h3>Estas seguro de que quieres borrar su resena?</h3>
+        <input type="radio" id="yes" name="sureDelete" value="yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="sureDelete" value="no">
+        <label for="no">No</label><br>
+        
         <br><br>
-        <button type="submit" value="submit" name="submit">Guardar</button>
+        <button type="submit" value="submit" name="submit">Borrar</button>
 
-    </form> -->
-    <!-- hasta aca que el popup tenga esto -->
-
-
-    <!-- <h2>Mis Resenas:</h2> -->
-    <!-- <ul> -->
-      <!-- <% for(let i=0; i<listaMisResenas.length; i++){ %> -->
-          <!-- crear listaMisResenas en controller -->
-        <!-- <li> -->
-
-             <!-- <p>Resena: <%= listaMisResenas[i].texto_resena %></p> -->
-             <!-- <p>Puntaje: <%= listaMisResenas[i].puntaje %></p> -->
-            <!-- <p>Fecha Creacion: <%= listaMisResenas[i].fecha_creacion %></p> 
-            <p>Fecha Actualizacion: <%= listaMisResenas[i].fecha_actualizacion %></p>  -->
-                <!-- estos dos?? -->
-            <!-- <br><br> -->
-            <!-- <button type="button" value="editar" onclick="editPopUp()" name="editar">EDITAR</button>
-            <button type="button" value="goToMovie" name="goToMovie">IR A PELICULA</button>
-            <button type="button" value="delete" onclick="deletePopUp()" name="delete">BORRAR</button> -->
-                    <!-- botones para redirigir, como? -->
-
-
-        <!-- </li>
-     <% } %> 
-    </ul>    -->
-
+    </form> 
+    
+<!-- aca verificacion de usuario -->
 
 
 <!-- footer y links a js -->
