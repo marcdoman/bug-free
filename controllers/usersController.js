@@ -1,3 +1,8 @@
+const db = require('../database/models');
+const op = db.Sequelize.Op;
+const moduloLogin = require('../modulo-login');
+let bcrypt = require('bcryptjs');
+
 let funcion = {
     // Resultados de la búsqueda
   //si es usuarios --> registro (guardar el usuario nuevo)
