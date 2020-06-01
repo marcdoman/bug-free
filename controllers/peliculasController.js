@@ -7,11 +7,7 @@ let funcion = {
 
     crearResena: function (req, res) {
         db.Resenas
-        .findAll({
-            where: [{usuario_id: req.params.id}],
-            include:[{associacion:'usuario'}]
-            //estos van??
-        })
+        .findAll()
         .then(function(resenas){
             return res.render('detallePelicula');
         })
