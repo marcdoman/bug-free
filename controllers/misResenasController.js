@@ -3,6 +3,14 @@ const op = db.Sequelize.Op;
 
 let funcion = {
     // mis resenas del sitio web
+    loginUsuario: function (req, res) {
+
+
+    },
+    confirmarUsuario: function (req, res) {
+
+
+    },
     misResenas: function (req, res) {
       db.Resena.findAll({
         where: {usuario_id: req.params.id},
@@ -72,11 +80,15 @@ let funcion = {
 
    delete: function (req, res) {
     res.render('', {tipo: "delete", deleteId: req.params.id})
-
+      //aca va el login como primer parametro?
 },
 confirmarDelete: function (req, res) {
-//   db.Resena.destroy()
-
+  db.Resena.destroy({
+    where: {id: req.params.id}
+    //hace falta devuelta aclarar esto?
+})
+res.redirect('/misResenas')
+//esto esta bien?
 }
 }
 
