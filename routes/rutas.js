@@ -22,15 +22,16 @@ router.get('/generos', generosController.listado);
 router.get('/buscar/peliculas', buscadorController.peliculas);
 router.get('/buscar/usuarios', buscadorController.usuarios);
 
-// Detalle de una película
-router.get('/peliculas/detalle', peliculasController.detalle);
 
+// Detalle de una película
+router.get('/peliculas/detalle', peliculasController.crearResena);
+router.post('/peliculas/detalle', peliculasController.guardarResena);
 
 
 
 //Formulario registracion
-router.get('/registracion', registracionController.crear);
-router.post('/registracion', registracionController.guardado);
+router.get('/registracion', registracionController.crearUsuario);
+router.post('/registracion', registracionController.guardarUsuario);
 
 //userController
 // router.get('/', usersController.logIn);

@@ -48,8 +48,8 @@
 
 <!-- codigo para resenas  -->
 <h2>Escriba tus resenas:</h2> 
-<form action="/misResenas/<%=result.id%>" method="post">
-          <!-- esta bien el action?? -->
+<form action="/peliculas/detalle" method="post" id="escriboResena">
+          
     <label>Email:</label>
     <input type="email" placeholder="mimail@mail.com" name="email" required="required">
     <br>
@@ -75,24 +75,10 @@
 <!-- fin de codigo para resenas -->
 
 
-<h2>Resenas:</h2>
-<ul>
-  <% for(let i=0; i<listaResenas.length; i++){ %>
-    <li>
-         <p>Resena: <%= listaResenas[i].texto_resena %></p> 
-         <p>Usuario: <%= listaResenas[i].usuarios.nombre_usuario %></p>
-         <p>Puntaje: <%= listaResenas[i].puntaje %></p>
-        <!-- <p>Fecha Actualizacion: <%= listaResenas[i].fecha_actualizacion %></p> 
-        <p>Fecha Creacion: <%= listaResenas[i].fecha_creacion %></p>  -->
-         <!-- como hacer para esto?? -->
-          
-
-    </li>
- <% } %> 
-</ul>    
 
 
-   <!-- fin codigo de listado de resenas-->
+
+<!-- fin codigo de listado de resenas-->
 
 
 

@@ -4,16 +4,16 @@ const db = require('../database/models');
 
 let registracion = {
     
-        crear: function(req,res) {
+        crearUsuario: function(req,res) {
             db.Usuarios
             .findAll()
             .then(function(usuarios){
                 return res.render("registracion", {
-                    usuarios: usuarios
+                    
                 })
             })      
         },  
-        guardado: function (req, res) {
+        guardarUsuario: function (req, res) {
             db.Usuarios.create({
                 nombre_usuario: req.body.username,
                 email: req.body.email,
