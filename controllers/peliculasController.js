@@ -5,6 +5,21 @@ const op = db.Sequelize.Op;
 
 let funcion = {
 
+    resenasExistentes: function (req,res) {
+        db.Resenas.findAll({
+            where: {
+                pelicula_id: req.query.pelicula_id
+            }
+        })
+        .then (function(texto_resena){
+            res.render ('detallePelicula',{
+                pelicula_id: req.query.pelicula_id,
+                resena: texto_resena,
+            })
+        })
+    },
+
+
     crearResena: function (req, res) {
         db.Resenas
         .findAll()
