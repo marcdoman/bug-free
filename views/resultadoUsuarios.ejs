@@ -6,17 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hola</h1>
-  
 
-
-
+    <h1>Estos son tus resultados man</h1>
 <% if(resultado.length > 0 ) { %>
-
+    
     <% for (let i = 0; i < resultado.length; i++) { %>
-        <li>
-            <%= resultado[i].nombre_usuario %>
-        </li>
+
+            <h3>Nombre de usuario: <a href="usuarios/detalle/id"><%= resultado[i].nombre_usuario %></a></h3>
+            <h4>Email: <%= resultado[i].email %></h4> 
+            <hr>
+
     <% } %>
 
 <% } else { %> 

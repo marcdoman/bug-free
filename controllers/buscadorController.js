@@ -23,7 +23,25 @@ let funcion = {
             })    
         })    
         
+    },
+    searchById: function (req,res){
+        db.Usuarios.findByPk(req.params.id)
+
+        .then(function(usuario){
+            db.Resenas.findAll({
+                where: {
+                    idUsuarios: usuario.id
+                }
+            })
+            .then (function (reviews) {
+                res.render('detalleUsuario',{
+                    Usuarios:detalle,
+                    Resenas: reviews
+                })
+            })
+        })
+        
     }
-}
+};
 
 module.exports = funcion; 
