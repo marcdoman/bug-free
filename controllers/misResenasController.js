@@ -9,19 +9,20 @@ let funcion = {
 //no funcion
     },
     misResenas: function (req, res) {
-      db.Resena.findAll({
+      db.Resenas.findAll({
         where: {usuario_id: req.params.id},
         //creo -- se entiende que es id de usuario
         include: ["usuarios"]
         //la tabla de usuarios?
       })
       .then(result =>{
+        // res.send(result)
         res.render('misResenas', {resultado: result})
       })
 
    },
    editar: function (req, res) {
-       db.Resena.findOne({
+       db.Resenas.findOne({
             where: [{id: req.params.id}]
      }) 
        .then(result =>{
@@ -51,17 +52,24 @@ let funcion = {
    },
 
    delete: function (req, res) {
-    res.render('deleteResena', {deleteId: req.params.id})
+    // res.render('deleteResena', {deleteId: req.params.id})
+    db.Resenas.findOne({
+      where: [{id: req.params.id}]
+    }) 
+    .then(result =>{
+      res.render('deleteResena', {deleteId: req.params.id, result: result, error: req.params.error})
+      //el error?
+    })
       //aca va el login como primer parametro?
-},
-confirmarDelete: function (req, res) {
+  },
+  confirmarDelete: function (req, res) {
   
-  db.Resena.destroy({
-    where: {id: req.params.id}
+    db.Resenas.destroy({
+      where: {id: req.params.id}
     //hace falta devuelta aclarar esto?
-})
-res.redirect('/misResenas')
-}
+  })
+  res.redirect('/misResenas')
+  }
 }
 
 module.exports = funcion;

@@ -20,35 +20,35 @@
     <!-- login -->
 
 
-    <!-- <h2><%= result[0].nombre_usuario %>'s Resenas:</h2> -->
+    <!-- <h2><%#= result[0].nombre_usuario %>'s Resenas:</h2> -->
         <!-- si todo funciona probar above -->
     <h2>Mis Resenas:</h2>
 
 
-       <!-- <%if (result.length == 0) { %>
+       <!-- <%#if (result.length == 0) { %>
       <h2>No hay reviews todavia</h2>
-   <%} else { %>
+   <%#} else { %>
   -->
           <!-- si todo funciona probar above -->
 
     <ul>
-      <% for(let i=0; i<listaMisResenas.length; i++){ %>
-          <!-- crear listaMisResenas en controller -->
+        <!-- <%#= resultado[0].puntaje %> -->
+      <% for(let i=0; i<resultado.length; i++){ %>
         <li>
 
-             <p>Resena: <%= listaMisResenas[i].texto_resena %></p>
-             <p>Puntaje: <%= listaMisResenas[i].puntaje %></p>
+             <p>Resena: <%= resultado[i].texto_resena %></p>
+             <p>Puntaje: <%= resultado[i].puntaje %></p>
 
             <br><br>
             
-            <a class="edit" href="/misResenas/editar/<%=listaMisResenas[i].id %>">EDITAR</a>
-            <a class="goTo" href="/detallePelicula/<%=listaMisResenas[i].pelicula_id %>">IR A PELICULA</a>
-            <a class="delete" href="/misResenas/delete/<%=listaMisResenas[i].id %>">BORRAR</a>
+            <a class="edit" href="/misResenas/editar/<%=resultado[i].id %>">EDITAR</a>
+            <a class="goTo" href="/detallePelicula/<%=resultado[i].pelicula_id %>">IR A PELICULA</a>
+            <a class="delete" href="/misResenas/delete/<%=resultado[i].id %>">BORRAR</a>
                     
         </li>
      <% } %> 
     </ul>   
-   <!-- <% } %> -->
+   <!-- <%# } %> -->
         <!-- si todo funciona probar above -->
 
 
