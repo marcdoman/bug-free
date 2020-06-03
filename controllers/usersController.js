@@ -18,15 +18,18 @@ let funcion = {
 
     confirmarUsuario: function (req, res) {
         //validacion de usuario:
-        Usuario.validate(req.body.email, req.body.password)
+
+        moduloLogin.validate(req.body.email, req.body.password)
         //o es modulo login??
             .then(result =>{
                 if(result == undefined){
-                    backURL=req.header('Referer') || '/';
-                    res.redirect(backURL);
+                    // backURL=req.header('Referer') || '/';
+                    // res.redirect(backURL);
+                    res.redirect('/');
 
             } else {
                 res.redirect("/misResenas");
+                //o res.redirect("/misResenas" + result.id)
              
             }
         })

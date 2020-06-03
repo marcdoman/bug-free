@@ -15,13 +15,12 @@
 
 <!-- termina el header -->
 
-   <b><h1>LOGIN</h1></b> 
    <!-- above? -->
-   <!-- <%if (result.length == 0 { %>
-      
-   })  -->
 
-    <form action="/misResenas">
+
+    <form method="POST" action="/misResenas">
+      <h1>LOGIN</h1>
+
         <div class="container">
 
           <label>Nombre Usuario:</label>
@@ -38,7 +37,7 @@
                 
           <br><br>
     
-          <button type="submit" class="registerbtn">Ir a tus reseñas</button>
+          <button type="submit" class="registerbtn" name="button">Ir a tus reseñas</button>
                 <!--  ya tengo redirect en usersController -- cuenta?-->
                 <!-- cambiar class? -->
           

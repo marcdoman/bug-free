@@ -43,11 +43,14 @@ router.post('/registracion', registracionController.guardarUsuario);
 // router.get('/logIn', logInController.logIn);
 
 //MisResena de un usuario
-router.get('/misResenas', usersController.logIn);
-router.post('/misResenas', usersController.confirmarUsuario);
+router.get('/logIn', usersController.logIn);
+router.post('/logIn', usersController.confirmarUsuario);
+//above esta bien?
 
 router.get('/misResenas', misResenasController.listaMisResenas);
-router.get('/misResenas/:id', misResenasController.misResenas);
+router.get('/misResenas', misResenasController.misResenas);
+//o : router.get('/misResenas/:id', misResenasController.misResenas);
+
 router.get('/misResenas/editar/:id', misResenasController.editar);
 router.post('/misResenas/editar/:id', misResenasController.confirmarEdit);
 router.get('/misResenas/delete/:id', misResenasController.delete);

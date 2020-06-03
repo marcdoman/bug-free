@@ -26,12 +26,23 @@ let moduloLogin = {
     validar: function (email, pass) {
         return db.Usuario.findOne({
             where:{
-                email:email,
+                email: email,
                 password: pass
             },
         })
         .then(results=>{
-            return results;
+           if (results != null){
+                let check = bcrypt.compareSync(pass, results.password);
+                if (check) {
+                    return results;
+                } else {
+                    return undefined;
+                }
+           } else {
+               return undefined
+           }
+        
+
         })
     }
 }
