@@ -9,6 +9,7 @@ const peliculasController = require('../controllers/peliculasController');
 const misResenasController = require('../controllers/misResenasController');
 const registracionController = require('../controllers/registracionController');
 const usersController = require('../controllers/usersController');
+const detalleUsuarioController = require('../controllers/buscadorController');
 
 
 
@@ -21,12 +22,12 @@ router.get('/generos', generosController.listado);
 // Resultados de las búsquedas
 router.get('/buscar/peliculas', buscadorController.peliculas);
 router.get('/buscar/usuarios', buscadorController.usuarios);
+router.get('/buscar/usuarios/detalle/:id', detalleUsuarioController.searchById);
 
 
 // Detalle de una película
 router.get('/peliculas/detalle', peliculasController.crearResena);
 router.post('/peliculas/detalle', peliculasController.guardarResena);
-
 
 
 //Formulario registracion
