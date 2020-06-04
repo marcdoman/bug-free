@@ -54,7 +54,9 @@ let funcion = {
    delete: function (req, res) {
     // res.render('deleteResena', {deleteId: req.params.id})
     db.Resenas.findOne({
-      where: [{id: req.params.id}]
+      where: [{id: req.params.id, 
+        // usuario_id: req.params.usuario_id
+      }]
     }) 
     .then(result =>{
       res.render('deleteResena', {deleteId: req.params.id, result: result, error: req.params.error})
