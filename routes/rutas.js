@@ -26,7 +26,7 @@ router.get('/buscar/usuarios/detalle/:id', detalleUsuarioController.searchById);
 
 
 // Detalle de una película
-router.get('/peliculas/detalle', peliculasController.crearResena);
+router.get('/peliculas/detalle', peliculasController.resenasExistentes);
 router.post('/peliculas/detalle', peliculasController.guardarResena);
 
 

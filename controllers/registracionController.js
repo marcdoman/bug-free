@@ -1,5 +1,5 @@
 const db = require('../database/models');
-
+let bcrypt = require('bcryptjs');
 // Registracion del usuario
 
 let registracion = {
@@ -17,7 +17,7 @@ let registracion = {
             db.Usuarios.create({
                 nombre_usuario: req.body.username,
                 email: req.body.email,
-                password: req.body.psw,
+                password: bcrypt.hashSync(req.body.psw, 10),
                 fecha_nacimiento: req.body.birthday,
             })
             .then(function(parametro){
