@@ -21,11 +21,12 @@
 
 
     <h2>Borrar tu resena:</h2> 
-    <form action="/misResenas/delete/<%=result.deleteId%>" method="post">
+    <form action="/misResenas/delete/<%=deleteId%>" method="post">
         <!-- es form? -->
         <h3>BORRAR</h3>
             <!-- //aca pedir mail y contra -->
         <br><br>
+        <input type="text" hidden value="<%=result.usuario_id%>" name="usuario_id">
         <a href="/misResenas/<%=result.usuario_id%>">GO BACK</a>
             <!-- como hago para que sea el id del user? -->
         <button type="submit" value="submit" name="submit">CONFIRM</button>

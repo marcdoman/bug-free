@@ -70,7 +70,8 @@ let funcion = {
       where: {id: req.params.id}
     //hace falta devuelta aclarar esto?
   })
-  res.redirect('/misResenas')
+
+  res.redirect('/misResenas/'+ req.body.usuario_id)
   }
 }
 

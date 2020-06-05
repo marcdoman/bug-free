@@ -29,20 +29,20 @@ let moduloLogin = {
         return db.Usuarios.findOne({
             where:{
                 email: email,
-                password: pass
+                // password: pass
             },
         })
         .then(results=>{
-        //    if (results != null){
-        //         // let check = bcrypt.compareSync(pass, results.password);
-        //         if (check) {
-        //             return results;
-        //         } else {
-        //             return undefined;
-        //         }
-        //    } else {
-        //        return undefined
-        //    }
+           if (results != null){
+                let check = bcrypt.compareSync(pass, results.password);
+                if (check) {
+                    return results;
+                } else {
+                    return undefined;
+                }
+           } else {
+               return undefined
+           }
         
             return results;
         })
