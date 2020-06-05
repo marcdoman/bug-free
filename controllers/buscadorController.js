@@ -30,12 +30,12 @@ let funcion = {
         .then(function(usuario){
             db.Resenas.findAll({
                 where: {
-                    idUsuarios: usuario.id
+                    usuario_id: usuario.id
                 }
             })
             .then (function (reviews) {
                 res.render('detalleUsuario',{
-                    Usuarios:detalle,
+                    usuario:usuario,
                     Resenas: reviews
                 })
             })

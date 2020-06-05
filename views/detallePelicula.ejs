@@ -31,14 +31,23 @@
 <!-- Reseñas existentes de la pelicula-->
 
 <h2>Reseñas</h2>
+<% if(resena.length > 0 ) { %>
+<% for (let i = 0; i < resena.length; i++) { %>
+ <h4>Reseña de la serie <%= resena.id %> </h4>
+ <p><%= resena[i].texto_resena%></p>
+ <hr>  
+<%} %>
 
+<%} else { %>
+  <p>No hemos encontrado reseñas para esta pelicula</p>
+<% } %>
 
 
 
 <!-- escribir resenas  -->
 <h2>Escribí una reseña:</h2> 
 <form action="/peliculas/detalle" method="post">
-          
+    <input type="hidden" name="idPeli" value="<%= pelicula_id %>">
     <label>Email:</label>
     <input type="text" placeholder="Email" name="email" required="required">
     <br>
