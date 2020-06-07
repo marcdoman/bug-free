@@ -26,7 +26,7 @@ let funcion = {
             where: [{id: req.params.id}]
      }) 
        .then(result =>{
-            res.render('editResena', {result: result, error: req.params.error})
+            res.render('editResena', {editId: req.params.id, result: result, error: req.params.error})
             //el error?
        })
         //aca tiene que recuperar los datos 
@@ -36,17 +36,18 @@ let funcion = {
              //aca se mandan los datos editados
       const updateResena = {
         //hay que aclararlo devuelta? ya lo hize en editar
-        resena: req.body.resena,
+        resena: req.body.texto_reseno,
         puntaje: req.body.puntaje
       } 
       db.Resena.update({
+        // where: {id: req.params.id},
          resena: updateResena.resena,
          puntaje: updateResena.puntaje,
           //aca o un --> si where
        })
        .then(()=>{
         
-           res.redirect('/misResenas')
+           res.redirect('/misResenas/'+ req.body.usuario_id)
        })
 
    },
