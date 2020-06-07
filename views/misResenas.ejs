@@ -10,29 +10,18 @@
 </head>
 <body>
 
-    <!-- empieza el header -->
+<!-- empieza el header -->
 
 <%- include('./partials/header.ejs') %>
 
-<!-- termina el header -->
 
-
-    <!-- login -->
-
-
-    <!-- <h2><%#= result[0].nombre_usuario %>'s Resenas:</h2> -->
-        <!-- si todo funciona probar above -->
     <h2>Mis Resenas:</h2>
 
 
-       <!-- <%#if (result.length == 0) { %>
-      <h2>No hay reviews todavia</h2>
-   <%#} else { %>
-  -->
-          <!-- si todo funciona probar above -->
 
+    <%if (resultado.length > 0) { %>
     <ul class="aca">
-        <!-- <%#= resultado[0].puntaje %> -->
+        
       <% for(let i=0; i<resultado.length; i++){ %>
         <li>
 
@@ -41,15 +30,19 @@
 
             <br><br>
             
-            <a class="edit" href="/misResenas/editar/<%=resultado[i].id %>">EDITAR</a>
-            <a class="goTo" href="/peliculas/detalle/?id=<%=resultado[i].pelicula_id %>">IR A PELICULA</a>
-            <a class="delete" href="/misResenas/delete/<%=resultado[i].id %>">BORRAR</a>
+            <a class="edit" href="/misResenas/editar/<%=resultado[i].id %>">editar</a>
+            <a class="goTo" href="/peliculas/detalle/?id=<%=resultado[i].pelicula_id %>">ir a pelicula</a>
+            <a class="delete" href="/misResenas/delete/<%=resultado[i].id %>">borrar</a>
                     
         </li>
      <% } %> 
     </ul>   
-   <!-- <%# } %> -->
-        <!-- si todo funciona probar above -->
+    <%} else { %>
+   
+      <h2>No hay reviews todavia</h2>
+
+    <% } %> 
+
 
 
 <!-- footer y links a js -->
