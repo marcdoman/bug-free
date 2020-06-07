@@ -1,5 +1,7 @@
 const db = require('../database/models');
 const op = db.Sequelize.Op;
+const moduloLogin = require('../modulo-login');
+let bcrypt = require('bcryptjs');
 
 let funcion = {
     // mis resenas del sitio web
@@ -25,8 +27,9 @@ let funcion = {
        db.Resenas.findOne({
             where: [{id: req.params.id}]
      }) 
-       .then(result =>{
-            res.render('editResena', {editId: req.params.id, result: result, error: req.params.error})
+       .then(resultado =>{
+            res.render('editResena', {resultado: resultado, error: req.params.error})
+            //editId: req.params.id, 
             //el error?
        })
         //aca tiene que recuperar los datos 
@@ -34,21 +37,30 @@ let funcion = {
    },
    confirmarEdit: function (req, res) {
              //aca se mandan los datos editados
-      const updateResena = {
-        //hay que aclararlo devuelta? ya lo hize en editar
-        resena: req.body.texto_reseno,
-        puntaje: req.body.puntaje
-      } 
-      db.Resena.update({
-        // where: {id: req.params.id},
-         resena: updateResena.resena,
-         puntaje: updateResena.puntaje,
-          //aca o un --> si where
-       })
-       .then(()=>{
-        
-           res.redirect('/misResenas/'+ req.body.usuario_id)
-       })
+    //  const updateResena = {
+    //     resena: req.body.texto_reseno,
+    //     puntaje: req.body.puntaje
+    //  } 
+      moduloLogin.validar(req.body.email,req.body.password)
+      .then(resultado => {
+        if (resultado != undefined){
+          db.Resenas.update({
+            // where: {id: req.params.id},
+             resena: req.body.texto_resena,
+             puntaje: req.body.puntaje,
+              //aca o un --> si where
+           }, {
+             where: {id: req.params.id}
+           })
+           .then(() => {
+            // res.redirect('/misResenas/'+ req.body.usuario_id)
+            res.redirect('/misResenas/'+ resultado.id);
+
+           })
+        } 
+
+      });
+
 
    },
 
