@@ -46,8 +46,8 @@ let funcion = {
         if (resultado != undefined){
           db.Resenas.update({
             // where: {id: req.params.id},
-             resena: req.body.texto_resena,
-             puntaje: req.body.puntaje,
+            texto_resena: req.body.texto_resena,
+             puntaje: req.body.puntaje
               //aca o un --> si where
            }, {
              where: {id: req.params.id}
@@ -58,6 +58,9 @@ let funcion = {
 
            })
         } 
+        else{
+          res.redirect('/registracion')
+        }
 
       });
 
@@ -67,25 +70,36 @@ let funcion = {
    delete: function (req, res) {
     // res.render('deleteResena', {deleteId: req.params.id})
     db.Resenas.findOne({
-      where: [{id: req.params.id, 
-        // usuario_id: req.params.usuario_id
-      }]
+      where: [{id: req.params.id }]
     }) 
-    .then(result =>{
-      res.render('deleteResena', {deleteId: req.params.id, result: result, error: req.params.error})
+    .then(resultado =>{
+      res.render('deleteResena', {deleteId: req.params.id, resultado: resultado, error: req.params.error})
       //el error?
     })
       //aca va el login como primer parametro?
   },
   confirmarDelete: function (req, res) {
-  
-    db.Resenas.destroy({
-      where: {id: req.params.id}
-    //hace falta devuelta aclarar esto?
-  })
 
-  res.redirect('/misResenas/'+ req.body.usuario_id)
+  moduloLogin.validar(req.body.email,req.body.password)
+    .then(resultado => {
+      if (resultado != undefined){
+        db.Resenas.destroy({
+          where: {id: req.params.id}
+      })
+      .then(() => {
+        res.redirect('/misResenas/'+ req.body.usuario_id)
+
+    
+       })
+      } 
+    else{
+        res.redirect('/registracion')
+      }
+    })
+
   }
-}
+};
+
 
 module.exports = funcion;
+
