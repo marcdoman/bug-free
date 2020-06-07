@@ -1,0 +1,51 @@
+* {box-sizing: border-box}
+
+
+.uk-notification{
+  z-index: 2000 !important;
+}
+
+#header{
+  background-color: #000d1e !important;
+}
+
+body{
+  padding-top: 10%;
+  background-color: #000d1e;
+  color:white;
+  
+}
+
+#formularioRegistracion {
+  background-color: #00173a ;
+  color:white;
+}
+
+#titulo{
+  color:white;
+}
+
+
+#footer{
+    background-color: #000d1e !important;
+}
+
+#logoFooter{
+  width: 20%;
+  height: auto;
+}
+
+
+
+.contenedor{
+  margin: 0 auto;
+}
+
+.white {
+    color:white;
+    
+}
+
+#usuarios {
+    background-color: #00173a ;
+  }

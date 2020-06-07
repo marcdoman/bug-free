@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>resultados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/resultadoUsuarios.css">
+    <link rel="stylesheet" href="/uikit-3.1.5/css/uikit.min.css" />
 </head>
 <body>
 
-    <h1>Estos son tus resultados man</h1>
+<!-- header -->
+
+<%- include('./partials/header.ejs') %>
+
+<!--resultados de busqueda-->
+<div id="usuarios">
+<h1 class="white">Estos son tus resultados man</h1>
+<hr>
 <% if(resultado.length > 0 ) { %>
     
     <% for (let i = 0; i < resultado.length; i++) { %>
-
-            <h3>Nombre de usuario: <a href="usuarios/detalle/<%= resultado[i].id %>"><%= resultado[i].nombre_usuario %></a></h3>
-            <h4>Email: <%= resultado[i].email %></h4> 
+          
+            <h3 class="white">Nombre de usuario: <a href="usuarios/detalle/<%= resultado[i].id %>"><%= resultado[i].nombre_usuario %></a></h3>
+            <h4 class="white">Email: <%= resultado[i].email %></h4> 
             <hr>
-
+       
     <% } %>
 
 <% } else { %> 
 
-    <p>No tengo resultados logicos man</p> 
+    <p class="white">No tengo resultados logicos man</p> 
 
 <% } %>
 
+</div>
+
+<!-- footer y links a js -->
+
+<%- include('./partials/footer.ejs') %>
+
+<%- include('./partials/links.ejs') %>
 
 </body>
 </html>
