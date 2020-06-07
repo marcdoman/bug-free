@@ -45,7 +45,7 @@ let funcion = {
             res.redirect("/");
         })
         } else {
-            res.send("Hubo un error al crear la reseña")
+            res.redirect("/registracion");
         }
         
         
