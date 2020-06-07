@@ -19,14 +19,14 @@
 
 
     <%if (resultado.length > 0) { %>
-    <ul class="aca">
-      <h2 class="tocenter">Mis Resenas:</h2>
+    <ul class="resenas">
+      <h2 class="tocenter">Mis Reseñas:</h2>
 
       <% for(let i=0; i<resultado.length; i++){ %>
 
-        <li>
+        <li id="resena">
 
-             <p>Resena: <%= resultado[i].texto_resena %></p>
+             <p>Reseña: <%= resultado[i].texto_resena %></p>
              <p>Puntaje: <%= resultado[i].puntaje %></p>
 
             <br><br>
@@ -40,7 +40,7 @@
     </ul>   
     <%} else { %>
    
-      <h2>No hay reviews todavia</h2>
+      <h2>Aún no tienes reseñas</h2>
 
     <% } %> 
 

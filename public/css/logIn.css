@@ -4,6 +4,32 @@
   z-index: 2000 !important;
 }
 
+
+
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=email]  {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email] {
+  background-color: #ddd;
+  outline: none;
+  ;
+}
+
+
+
 #header{
   background-color: #000d1e !important;
 }
@@ -11,6 +37,9 @@
 body{
   padding-top: 10%;
   background-color: #000d1e;
+  height: 200%;
+  color: white;
+  
 }
 
 div.columnas {
@@ -36,9 +65,11 @@ div.columnas {
 }
 
 #logIn{
-    color: white
+    color: white;
+    background-color: #00173a ;
+    
 }
 
 .titulo{
-    color:white
+    color:white;
 }
