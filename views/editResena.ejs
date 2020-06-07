@@ -19,27 +19,27 @@
 
     <!-- login -->
 
-    <h2>Editar tu resena:</h2> 
+    <h2 class="edith">Editar tu resena:</h2> 
     <form class="aca" action="/misResenas/editar/<%=resultado.id%>" method="post">
 
-        <label>Email:</label>
+        <label class="tobecentered">Email:</label>
         <input type="email" placeholder="mimail@mail.com" name="email" required="required">
         <br>
     
-        <label>Contrasena:</label>
+        <label class="tobecentered">Contrasena:</label>
         <input type="password" placeholder="password123" name="password">
         <br>
 
-        <label>Resena:</label>
+        <label class="tobecentered">Resena:</label>
         <input type="text" placeholder="Tremenda pelicula!" required="required" name="texto_resena" id="texto_resena">
         <br>
 
-        <label>Puntaje:</label>
+        <label class="tobecentered">Puntaje:</label>
         <input type="integer" name="puntaje">
         <br>
 
         <br><br>
-        <button type="submit" value="submit" name="submit">Guardar</button>
+        <button type="submit" value="submit" class="botonguardar" name="submit">Guardar</button>
 
     </form> 
 
