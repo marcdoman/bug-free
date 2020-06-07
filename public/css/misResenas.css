@@ -21,6 +21,12 @@ li{
 }
 /* nose si queda bien asi */
 
+.tocenter{
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
 .edit{
     background-color: #4CAF50;
     color: white;

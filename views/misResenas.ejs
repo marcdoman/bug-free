@@ -15,14 +15,15 @@
 <%- include('./partials/header.ejs') %>
 
 
-    <h2>Mis Resenas:</h2>
 
 
 
     <%if (resultado.length > 0) { %>
     <ul class="aca">
-        
+      <h2 class="tocenter">Mis Resenas:</h2>
+
       <% for(let i=0; i<resultado.length; i++){ %>
+
         <li>
 
              <p>Resena: <%= resultado[i].texto_resena %></p>
