@@ -17,20 +17,22 @@
 
 <!--Detalle del usuario-->
 
-<h1 class="white">Estas viendo la informacion privada del usuario <%= usuario.nombre_usuario %></h1>
-
-<h2 class="white">Reseñas escritas por el usuario:</h2>
+<h1 class="white">Estas viendo la informacion privada del usuario <%= usuario.nombre_usuario %>:</h1> <br>
+<h4 class="white">Email: <%= usuario.email %> </h4>
+<h4 class="white">Cumpleaños: <%= usuario.fecha_nacimiento %></h4> <br><br>
+<h3 class="white">Reseñas escritas por el usuario:</h3>
 <div class="white" id="cajitaFeliz">
 <% if (Resenas.length >0 ) { %>
     <% for (let i = 0; i < Resenas.length; i++) { %>
        <h3 class="white">Reseña de la pelicula con id <%= Resenas[i].pelicula_id %> :</h3>
        <h3 class="white"><%= Resenas[i].texto_resena%></h3>
        <p><small>(para saber de que película se trata, consultar en theMovieDB, link en la descripcion)</small></p>
+       <p></p>
         <hr>
         
   <%  }  %>
     <% } else { %>
-         <p>El usuario aún no tiene reseñas escritas</p>
+         <p>El usuario aún no ha escrito</p>
   <%  } %>
 </div>
 <!-- footer y links a js -->
