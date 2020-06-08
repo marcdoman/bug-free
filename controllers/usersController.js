@@ -5,30 +5,18 @@ let bcrypt = require('bcryptjs');
 
 let funcion = {
 
-    // registro: function (req, res) {
-    //     //lo de bcrypt??
-    //     //tiene que cargar un nuevo usuario a la base de datos
-    //     //requreiendo a base de datos, llamando a modelo, y usando create! -- objeto con caracteristicas de usuario
-
-    // },
-    //above sera registracion no?
     logIn: function (req, res) {
         res.render('logIn');
     },
 
     confirmarUsuario: function (req, res) {
-        //validacion de usuario:
 
         moduloLogin.validar(req.body.email, req.body.password)
-        //o es modulo login??
             .then(result =>{
                 if(result == undefined){
-                    // backURL=req.header('Referer') || '/';
-                    // res.redirect(backURL);
                     res.redirect('/');
 
             } else {
-                // res.redirect("/misResenas");
                 res.redirect("/misResenas/" + result.id);
              
             }
@@ -38,24 +26,3 @@ let funcion = {
    
 module.exports = funcion; 
 
-// solo para tener:
-        //validar que usuario exista: (en que cambia al formulario below?)
-        // Usuario.validate(req.body.email, req.body.password){
-    //         .then(resultado =>{
-    //             if(resultado != undefined){
-    //                 const resena = {
-    //                     pelicula_id: req.query.pelicula_id,
-    //                     usuario_id: resultado.usuario_id,
-    //                     //en esos que va?
-    //                     resena: req.body.resena,
-    //                     puntaje: req.body.puntaje
-    //                 }
-    //                 db.Resena.create(resena)
-    //         // en el objeto, que tambien tenga fecha_act --> aca pones a mano la fecha actual (en seuelize hay forma de poner el now)
-    //         } else {
-    //             res.redirect('/registro')
-    //             //si?
-    //         }
-    //     })
-    // }
-    //todo esto en loginController

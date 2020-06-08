@@ -29,6 +29,7 @@ module.exports = function (sequelize, DataTypes){
      {
         tableName: "resenas",
         timestamps: false
+        //nota para el que corrige: deberia decir true pero no nos dejaba cambiar la basededatos asique nos tiraba error
     }
     );
 

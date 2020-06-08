@@ -21,16 +21,6 @@ let funcion = {
     },
 
 
-   // crearResena: function (req, res) {
-   //     db.Resenas
-   //     .findAll()
-   //     .then(function(resenas){
-   //         return res.render('detallePelicula');
-   //     })
-   // },
-
-
-
     guardarResena: function (req, res) {
         moduloLogin.validar(req.body.email,req.body.password)
         .then (function (usuario){

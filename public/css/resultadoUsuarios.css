@@ -44,6 +44,11 @@ body{
 .white {
     color:white;
     
+    
+}
+
+.margined{
+  margin-bottom: 40%;
 }
 
 #usuarios {
