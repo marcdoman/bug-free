@@ -3,11 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle del usuario men</title>
+    <title>Detalle del usuario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/detalleUsuario.css">
+    <link rel="stylesheet" href="/uikit-3.1.5/css/uikit.min.css" />
 </head>
 <body>
     
-<h1>Estas viendo la informacion privada del usuario <%= usuario.nombre_usuario %></h1>
+<!-- header -->
+
+<%- include('./partials/header.ejs') %>
+
+
+<!--Detalle del usuario-->
+
+<h1 class="white">Estas viendo la informacion privada del usuario <%= usuario.nombre_usuario %></h1>
+
+<h2 class="white">Reseñas escritas por el usuario:</h2>
+<div class="white" id="cajitaFeliz">
+<% if (Resenas.length >0 ) { %>
+    <% for (let i = 0; i < Resenas.length; i++) { %>
+       <h3 class="white">Reseña de la pelicula con id <%= Resenas[i].pelicula_id %> :</h3>
+       <h3 class="white"><%= Resenas[i].texto_resena%></h3>
+       <p><small>(para saber de que película se trata, consultar en theMovieDB, link en la descripcion)</small></p>
+        <hr>
+        
+  <%  }  %>
+    <% } else { %>
+         <p>El usuario aún no tiene reseñas escritas</p>
+  <%  } %>
+</div>
+<!-- footer y links a js -->
+
+<%- include('./partials/footer.ejs') %>
+
+<%- include('./partials/links.ejs') %>
 
 
 
