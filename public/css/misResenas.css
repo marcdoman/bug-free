@@ -73,9 +73,17 @@
 }
 
 body{
-  padding-top: 80px;
+  padding-top: 20%;
   background-color: #000d1e;
-  color: white;;
+  color: white;
+  margin-top: 10%;
+}
+
+.aunno{
+  color: white;
+  padding-bottom: 40%;
+  width: 100%;
+  text-align: center;
 }
 
 
