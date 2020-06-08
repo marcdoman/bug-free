@@ -14,23 +14,20 @@
 
 <%- include('./partials/header.ejs') %>
 
-<!-- termina el header -->
 
 
-    <!-- login -->
-
-    <h2 class="edith">Editar tu resena:</h2> 
+    <h2 class="edith">Editar tu reseña:</h2> 
     <form class="aca" action="/misResenas/editar/<%=resultado.id%>" method="post">
 
         <label class="tobecentered">Email:</label>
         <input type="email" placeholder="mimail@mail.com" name="email" required="required">
         <br>
     
-        <label class="tobecentered">Contrasena:</label>
+        <label class="tobecentered">Contraseña:</label>
         <input type="password" placeholder="password123" name="password">
         <br>
 
-        <label class="tobecentered">Resena:</label>
+        <label class="tobecentered">Reseña:</label>
         <input type="text" placeholder="Tremenda pelicula!" required="required" name="texto_resena" id="texto_resena">
         <br>
 

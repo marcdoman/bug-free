@@ -19,7 +19,7 @@ router.get('/', indexController.home);
 //Resultado generos
 router.get('/generos', generosController.listado);
 
-// Resultados de las búsquedas
+// Resultados de las búsquedas de usuarios
 router.get('/buscar/peliculas', buscadorController.peliculas);
 router.get('/buscar/usuarios', buscadorController.usuarios);
 router.get('/buscar/usuarios/detalle/:id', detalleUsuarioController.searchById);
@@ -34,38 +34,18 @@ router.post('/peliculas/detalle', peliculasController.guardarResena);
 router.get('/registracion', registracionController.crearUsuario);
 router.post('/registracion', registracionController.guardarUsuario);
 
-//userController
-// router.get('/', usersController.logIn);
-// router.post('/', usersController.confirmarUsuario);
 
-//fin de userController
-
-//Log In
-// router.get('/logIn', logInController.logIn);
 
 //MisResena de un usuario
 router.get('/logIn', usersController.logIn);
 router.post('/misResenas', usersController.confirmarUsuario);
-//above esta bien?
-
-// router.get('/misResenas', misResenasController.listaMisResenas);
 router.get('/misResenas/:id', misResenasController.misResenas);
-//o : router.get('/misResenas/:id', misResenasController.misResenas);
 
+//editado y borrado de reseñas
 router.get('/misResenas/editar/:id', misResenasController.editar);
 router.post('/misResenas/editar/:id', misResenasController.confirmarEdit);
 router.get('/misResenas/delete/:id', misResenasController.delete);
 router.post('/misResenas/delete/:id', misResenasController.confirmarDelete);
-//fin de MisResenas de un usuario
-
-
-
-//router.get('/:error?', peliculasController.findByPk);
-
-//router.post('/resena/index/:id', peliculasController.index);
-//above? o era get?
-
-//router.post('/resena/create/:id', peliculasController.create);
 
 
 
