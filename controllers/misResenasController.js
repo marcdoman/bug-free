@@ -36,11 +36,6 @@ let funcion = {
 
    },
    confirmarEdit: function (req, res) {
-             //aca se mandan los datos editados
-    //  const updateResena = {
-    //     resena: req.body.texto_reseno,
-    //     puntaje: req.body.puntaje
-    //  } 
       moduloLogin.validar(req.body.email,req.body.password)
       .then(resultado => {
         if (resultado != undefined){
