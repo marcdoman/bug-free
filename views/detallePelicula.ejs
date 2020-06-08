@@ -30,33 +30,35 @@
 
 <!-- Reseñas existentes de la pelicula-->
 
-<h2>Reseñas</h2>
+<h2 class="white">Reseñas existentes:</h2>
 <% if(resena.length > 0 ) { %>
 <% for (let i = 0; i < resena.length; i++) { %>
- <h4>Reseña de la serie <%= resena.id %> </h4>
- <p><%= resena[i].texto_resena%></p>
+ <h4 class="white">Reseña de la serie <%= resena.id %> </h4>
+ <p class="white"><%= resena[i].texto_resena%></p>
  <hr>  
 <%} %>
 
 <%} else { %>
-  <p>No hemos encontrado reseñas para esta pelicula</p>
+  <p class="white">Aún no hemos encontrado reseñas para esta pelicula; creála!</p>
+
 <% } %>
 
+<br>
 
+<!-- Resenas  -->
 
-<!-- escribir resenas  -->
-<h2>Escribí una reseña:</h2> 
-<form action="/peliculas/detalle" method="post">
+<h2 class="white">Escribí una reseña:</h2> 
+<form action="/peliculas/detalle" method="post" class="white">
     <input type="hidden" name="idPeli" value="<%= pelicula_id %>">
     <label>Email:</label>
     <input type="text" placeholder="Email" name="email" required="required">
     <br>
 
-    <label>Contrasena:</label>
+    <label>Contraseña:</label>
     <input type="password" placeholder="Contraseña" name="password" required>
     <br>
 
-    <label>Resena:</label>
+    <label>Reseña:</label>
     <input type="text" placeholder="Reseña" name="texto_resena" required>
     <br>
 
@@ -70,8 +72,9 @@
 
 </form>
 
-<!-- fin de codigo para resenas -->
 
+
+<!-- Películas recomendadas -->
 
 <div class="row">
 
@@ -80,6 +83,8 @@
     <h1 class="text-white text-center">Peliculas recomendadas</h1>
   </div>
 </div>
+
+
 <!-- empieza el carousel -->
 <div class="uk-position-relative uk-visible-toggle uk-light uk-slider" tabindex="-1" uk-slider="autoplay: true">
 

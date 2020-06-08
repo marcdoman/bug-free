@@ -10,7 +10,7 @@
 
 
 body{
-  padding-top: 80px;
+  padding-top: 7%;
   background-color: #000d1e;
 }
 
@@ -38,4 +38,8 @@ div.columna {
 
 .contenedor{
   margin: 0 auto;
+}
+
+.white {
+  color: white;
 }
