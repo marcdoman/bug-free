@@ -18,8 +18,8 @@ CREATE TABLE IF NOT EXISTS `resenas` (
     `usuario_id` int(11) UNSIGNED NULL DEFAULT NULL,
     `texto_resena` varchar(255) NOT NULL,
     `puntaje` decimal(3,1) NULL DEFAULT NULL,
-    `fecha_creacion` timestamp NULL DEFAULT NULL,
-    `fecha_actualizacion` timestamp NULL DEFAULT NULL,
+    `createdAt` datetime NOT NULL,
+    `updatedAt` datetime NOT NULL,
     FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`)
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 

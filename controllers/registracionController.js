@@ -1,6 +1,5 @@
 const db = require('../database/models');
 let bcrypt = require('bcryptjs');
-// Registracion del usuario
 
 let registracion = {
     
