@@ -31,11 +31,14 @@
 <!-- Reseñas existentes de la pelicula-->
 
 <h2 class="white">Reseñas existentes:</h2>
+
+<div>
 <% if(resena.length > 0 ) { %>
 <% for (let i = 0; i < resena.length; i++) { %>
  <p class="white"><%= resena[i].texto_resena%></p>
  <hr>  
 <%} %>
+</div>
 
 <%} else { %>
   <p class="white">Aún no hemos encontrado reseñas para esta pelicula; creála!</p>
